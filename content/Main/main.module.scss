@@ -1,0 +1,33 @@
+.main {
+  margin: 0 auto;
+  width: 900px;
+  margin-bottom: 20px;
+
+  & p {
+    font-weight: 300;
+    font-size: 14px;
+    padding: 1rem 0;
+  }
+
+  &Card {
+    object-fit: contain;
+    border: 1px solid rgba(190, 190, 190, 0.47);
+    padding: 20px;
+    box-shadow: 5px 5px 10px 0px grey;
+
+    & img {
+      position: relative!important;
+      width: 100%;
+    }
+    & input {
+      padding: 30px 10px 5px;
+    }
+
+    &Information{
+      display: flex;
+      & div {
+        width: 50%;
+      }
+    }
+  }
+}

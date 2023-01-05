@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import {Header, Main} from "../layouts";
+import {Main} from '../content';
+import {Header} from "../layouts";
 
 
 export default function Home() {
