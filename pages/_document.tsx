@@ -13,7 +13,6 @@ export default function Document() {
         <Html lang="en">
             <Head>
                 <meta name="description" content="Get current weather"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
                 <style type='text/css'>{globalStyles}</style>
                 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' />
