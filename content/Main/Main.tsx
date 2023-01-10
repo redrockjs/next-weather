@@ -10,11 +10,93 @@ type CoordsTypes = {
   lon: number
 }
 
+type APIResponseTypes = {
+  "coord":
+    {
+      "lon": number,
+      "lat": number
+    },
+  "weather":
+    {
+      "id": number,
+      "main": string,
+      "description": string,
+      "icon": string
+    }[],
+  "base": string,
+  "main": {
+    "temp": number,
+    "feels_like": number,
+    "temp_min": number,
+    "temp_max": number,
+    "pressure": number,
+    "humidity": number
+  },
+  "visibility": number,
+  "wind": {
+    "speed": number,
+    "deg": number
+  },
+  "clouds": {
+    "all": number
+  },
+  "dt": number,
+  "sys": {
+    "type": number,
+    "id": number,
+    "country": string,
+    "sunrise": number,
+    "sunset": number
+  },
+  "timezone": number,
+  "id": number,
+  "name": string,
+  "cod": number
+}
+
+const initialData = {
+  "coord": {
+    "lon":0,
+    "lat":0
+  },
+  "weather":[
+    {"id":0,"main":"","description":"","icon":""}],
+  "base":"",
+  "main":{
+    "temp":0,
+    "feels_like":0,
+    "temp_min":0,
+    "temp_max":0,
+    "pressure":0,
+    "humidity":0
+  },
+  "visibility":10000,
+  "wind":{
+    "speed":2,
+    "deg":20
+  },
+  "clouds":{
+    "all":0
+  },
+  "dt":1673341747,
+  "sys":{
+    "type":0,
+    "id":0,
+    "country":"",
+    "sunrise":0,
+    "sunset":0},
+  "timezone":0,
+  "id":0,
+  "name":"",
+  "cod":0}
+
 export function Main() {
 
   const [coordinates, setCoordinates] = useState<CoordsTypes>()
 
-  const [data, setData] = useState<any>()
+  const [data, setData] = useState<APIResponseTypes>(initialData)
+
+  const [cityName, setCityName] = useState<string>("")
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -30,10 +112,24 @@ export function Main() {
     webAPI.getWeatherByPosition(coordinates.lat, coordinates.lon)
       .then(result => {
         setData(result)
-        console.log(data)
       })
       .catch(error => console.log(error));
   }, [coordinates])
+
+  const handleGetByName = () => {
+    webAPI.getWeatherByCityName(cityName)
+      .then(result => {
+        //console.log(result)
+        setData(result)
+      })
+      .catch(error => console.log(error))
+  }
+
+  const handleInputKeyDown =(event: { key: string; })=>{
+    if (event.key === 'Enter') {
+      handleGetByName()
+    }
+  }
 
   return <>
     <main className={s.main}>
@@ -55,6 +151,10 @@ export function Main() {
           placeholder="Enter city name"
           size="medium"
           sx={{width: '90%'}}
+          onChange={(e) => {
+            setCityName(e.target.value)
+          }}
+          onKeyDown={handleInputKeyDown}
         />
         <Button variant="contained" color="primary" size="small" sx={{margin: '10px'}}> Get </Button>
         <p>Город - {data.name}</p>
