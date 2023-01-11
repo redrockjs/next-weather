@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {Header} from "../../layouts";
+import {SignIn} from "../../content/SignIn";
 
 export default function _signIn() {
     return <>
@@ -7,6 +8,6 @@ export default function _signIn() {
             <title>isClowdly2 Weather app</title>
         </Head>
         <Header/>
-        login
+        <SignIn/>
     </>
 }

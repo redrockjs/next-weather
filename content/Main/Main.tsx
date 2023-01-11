@@ -1,4 +1,4 @@
-import s from "./main.module.scss"
+import s from "./styles.module.scss"
 import {Button, Input} from "@mui/material";
 import Image from "next/image";
 import {useEffect, useState} from "react";
@@ -119,7 +119,6 @@ export function Main() {
   const handleGetByName = () => {
     webAPI.getWeatherByCityName(cityName)
       .then(result => {
-        //console.log(result)
         setData(result)
       })
       .catch(error => console.log(error))
