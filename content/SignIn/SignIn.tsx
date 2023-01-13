@@ -6,9 +6,6 @@ export function SignIn() {
   const {data: session, status} = useSession()
   const loading = status === "loading"
 
-
-  console.log(session)
-
   return <>
     <main className={s.signIn}>
       {session ? (

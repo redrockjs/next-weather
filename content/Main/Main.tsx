@@ -1,9 +1,11 @@
 import s from "./styles.module.scss"
 import {Button, Input} from "@mui/material";
 import Image from "next/image";
+import {Icon} from "@iconify/react";
 import {useEffect, useState} from "react";
 import {webAPI} from "../../api/web";
 import {pressurePascalToMMHg} from "../../utilities/weather";
+import {useSession} from "next-auth/react";
 
 type CoordsTypes = {
   lat: number
@@ -56,39 +58,41 @@ type APIResponseTypes = {
 
 const initialData = {
   "coord": {
-    "lon":0,
-    "lat":0
+    "lon": 0,
+    "lat": 0
   },
-  "weather":[
-    {"id":0,"main":"","description":"","icon":""}],
-  "base":"",
-  "main":{
-    "temp":0,
-    "feels_like":0,
-    "temp_min":0,
-    "temp_max":0,
-    "pressure":0,
-    "humidity":0
+  "weather": [
+    {"id": 0, "main": "", "description": "", "icon": ""}],
+  "base": "",
+  "main": {
+    "temp": 0,
+    "feels_like": 0,
+    "temp_min": 0,
+    "temp_max": 0,
+    "pressure": 0,
+    "humidity": 0
   },
-  "visibility":10000,
-  "wind":{
-    "speed":2,
-    "deg":20
+  "visibility": 10000,
+  "wind": {
+    "speed": 2,
+    "deg": 20
   },
-  "clouds":{
-    "all":0
+  "clouds": {
+    "all": 0
   },
-  "dt":1673341747,
-  "sys":{
-    "type":0,
-    "id":0,
-    "country":"",
-    "sunrise":0,
-    "sunset":0},
-  "timezone":0,
-  "id":0,
-  "name":"",
-  "cod":0}
+  "dt": 1673341747,
+  "sys": {
+    "type": 0,
+    "id": 0,
+    "country": "",
+    "sunrise": 0,
+    "sunset": 0
+  },
+  "timezone": 0,
+  "id": 0,
+  "name": "",
+  "cod": 0
+}
 
 export function Main() {
 
@@ -97,6 +101,8 @@ export function Main() {
   const [data, setData] = useState<APIResponseTypes>(initialData)
 
   const [cityName, setCityName] = useState<string>("")
+
+  const {data: session, status} = useSession()
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -124,7 +130,7 @@ export function Main() {
       .catch(error => console.log(error))
   }
 
-  const handleInputKeyDown =(event: { key: string; })=>{
+  const handleInputKeyDown = (event: { key: string; }) => {
     if (event.key === 'Enter') {
       handleGetByName()
     }
@@ -156,7 +162,16 @@ export function Main() {
           onKeyDown={handleInputKeyDown}
         />
         <Button variant="contained" color="primary" size="small" sx={{margin: '10px'}}> Get </Button>
-        <p>Город - {data.name}</p>
+        <div className={s.mainCardCity}>
+          <div>
+            <p>Город - {data.name}</p>
+          </div>
+          {status === "authenticated" &&
+              <div>
+                  <Icon icon="mdi:cards-heart-outline" color="red" width="24" hFlip={true}/>
+              </div>
+          }
+        </div>
         <div className={s.mainCardInformation}>
           {data &&
               <>
