@@ -3,7 +3,7 @@ import axios, {AxiosError} from "axios";
 // Create ax - Axios instance
 const ax = axios.create(
   {
-    baseURL: process.env.REACT_APP_DB_URL,
+    baseURL: process.env.NEXT_PUBLIC_DB_URL,
   });
 
 export let firebaseApi = {
