@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {Header} from "../../layouts";
+import {Favorites} from "../../content";
 
 export default function _favorites() {
     return <>
@@ -7,7 +8,6 @@ export default function _favorites() {
             <title>isClowdly2 Weather app</title>
         </Head>
         <Header/>
-
-        Favorites
+        <Favorites/>
     </>
 }

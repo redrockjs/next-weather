@@ -15,7 +15,6 @@ export function SignIn() {
   useEffect(()=>{
     status === "authenticated" && dispatch(setIsAuth())
     status === "unauthenticated" && dispatch(unsetIsAuth())
-    console.log(rootState)
   },[session,dispatch, status])
 
 

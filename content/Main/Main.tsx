@@ -6,6 +6,8 @@ import {useEffect, useState} from "react";
 import {webAPI} from "../../api/web";
 import {pressurePascalToMMHg} from "../../utilities/weather";
 import {useSession} from "next-auth/react";
+import {useSelector} from "react-redux";
+import {RootState} from "../../store/store";
 
 type CoordsTypes = {
   lat: number
@@ -104,6 +106,8 @@ export function Main() {
 
   const {data: session, status} = useSession()
 
+  const isAuth = useSelector<RootState>(state => state.root.rootReducer.isAuth) as boolean
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
         const lat = position.coords.latitude
@@ -136,6 +140,14 @@ export function Main() {
     }
   }
 
+  const handleClickAddFavorites = () => {
+    console.log('add fav')
+  }
+
+  const handleClickRemoveFavorites = () => {
+    console.log('remove fav')
+  }
+
   return <>
     <main className={s.main}>
       <p>
@@ -166,11 +178,13 @@ export function Main() {
           <div>
             <p>Город - {data.name}</p>
           </div>
-          {status === "authenticated" &&
+
+          {isAuth &&
               <div>
                   <Icon icon="mdi:cards-heart-outline" color="red" width="24" hFlip={true}/>
               </div>
           }
+
         </div>
         <div className={s.mainCardInformation}>
           {data &&
