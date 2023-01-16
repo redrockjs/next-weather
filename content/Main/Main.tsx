@@ -109,7 +109,7 @@ export function Main() {
 
   const isAuth = useSelector<RootStateType>(state => state.root.rootReducer.isAuth) as boolean
 
-  const favoriteCities = useSelector<RootStateType>(state => state.root.rootReducer.favoriteCities)
+  const favoriteCities = useSelector<RootStateType>(state => state.root.rootReducer.favoriteCities) as FavoriteCitiesType[]
 
   const dispatch = useDispatch()
 
@@ -145,12 +145,14 @@ export function Main() {
     }
   }
 
-  const handleAddFavorites = () => {
-    console.log('add fav')
+  const handleAddFavorites = (data: APIResponseType) => {
+    dispatch(addFavorites({id: data.id, city: data.name, lat: data.coord.lat, lon: data.coord.lon}))
+    console.log(favoriteCities)
   }
 
-  const handleRemoveFavorites = () => {
-    console.log('remove fav')
+  const handleRemoveFavorites = (data: APIResponseType) => {
+    dispatch(removeFavorites(data.id))
+    console.log(favoriteCities)
   }
 
   return <>
@@ -186,8 +188,17 @@ export function Main() {
 
           {/*{isAuth &&*/}
           <div>
-            <Icon icon="mdi:cards-heart-outline" color="red" width="24" hFlip={true} onClick={handleAddFavorites}
-                  style={{cursor: "pointer"}}/>
+            {
+              favoriteCities && favoriteCities.some(city => city.id === data.id)
+                ? <Icon icon="mdi:cards-heart" color="red" width="24"
+                        onClick={() => handleRemoveFavorites(data)}
+                        style={{cursor: "pointer"}}/>
+                : <Icon icon="mdi:cards-heart-outline" color="red" width="24"
+                        onClick={() => handleAddFavorites(data)}
+                        style={{cursor: "pointer"}}/>
+            }
+
+
           </div>
           {/*}*/}
 

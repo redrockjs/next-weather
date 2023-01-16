@@ -13,7 +13,7 @@ const rootSlice = createSlice({
   name: 'root',
   initialState:{
     isAuth: false,
-    favoriteCities: [] as FavoriteCitiesType[], //[{key: string, id: number, city: string, lat: decimal, lon: decimal}],
+    favoriteCities: [] as FavoriteCitiesType[], //[{id: number, city: string, lat: decimal, lon: decimal}],
   },
   reducers: {
     setIsAuth(state) {
@@ -24,9 +24,11 @@ const rootSlice = createSlice({
     },
     addFavorites(state, action) {
       state.favoriteCities.push(action.payload)
+      console.log("Pushed:",action.payload)
     },
     removeFavorites(state, action){
-      state.favoriteCities.filter( item => item !== action.payload )
+      state.favoriteCities.filter(item => item.id !== action.payload as number)
+      console.log("Filtered:", action.payload)
     },
 
   }
