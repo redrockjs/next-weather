@@ -6,15 +6,16 @@ import {useEffect, useState} from "react";
 import {webAPI} from "../../api/web";
 import {pressurePascalToMMHg} from "../../utilities/weather";
 import {useSession} from "next-auth/react";
-import {useSelector} from "react-redux";
-import {RootState} from "../../store/store";
+import {useDispatch, useSelector} from "react-redux";
+import {RootStateType} from "../../store/store";
+import {addFavorites, removeFavorites, FavoriteCitiesType} from "../../store/rootSlice"
 
-type CoordsTypes = {
+type CoordsType = {
   lat: number
   lon: number
 }
 
-type APIResponseTypes = {
+type APIResponseType = {
   "coord":
     {
       "lon": number,
@@ -98,15 +99,19 @@ const initialData = {
 
 export function Main() {
 
-  const [coordinates, setCoordinates] = useState<CoordsTypes>()
+  const [coordinates, setCoordinates] = useState<CoordsType>()
 
-  const [data, setData] = useState<APIResponseTypes>(initialData)
+  const [data, setData] = useState<APIResponseType>(initialData)
 
   const [cityName, setCityName] = useState<string>("")
 
   const {data: session, status} = useSession()
 
-  const isAuth = useSelector<RootState>(state => state.root.rootReducer.isAuth) as boolean
+  const isAuth = useSelector<RootStateType>(state => state.root.rootReducer.isAuth) as boolean
+
+  const favoriteCities = useSelector<RootStateType>(state => state.root.rootReducer.favoriteCities)
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -140,11 +145,11 @@ export function Main() {
     }
   }
 
-  const handleClickAddFavorites = () => {
+  const handleAddFavorites = () => {
     console.log('add fav')
   }
 
-  const handleClickRemoveFavorites = () => {
+  const handleRemoveFavorites = () => {
     console.log('remove fav')
   }
 
@@ -179,11 +184,12 @@ export function Main() {
             <p>Город - {data.name}</p>
           </div>
 
-          {isAuth &&
-              <div>
-                  <Icon icon="mdi:cards-heart-outline" color="red" width="24" hFlip={true}/>
-              </div>
-          }
+          {/*{isAuth &&*/}
+          <div>
+            <Icon icon="mdi:cards-heart-outline" color="red" width="24" hFlip={true} onClick={handleAddFavorites}
+                  style={{cursor: "pointer"}}/>
+          </div>
+          {/*}*/}
 
         </div>
         <div className={s.mainCardInformation}>

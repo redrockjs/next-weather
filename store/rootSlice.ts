@@ -33,4 +33,4 @@ const rootSlice = createSlice({
 })
 
 export default rootSlice.reducer
-export const {setIsAuth, unsetIsAuth} = rootSlice.actions
+export const {setIsAuth, unsetIsAuth, addFavorites, removeFavorites} = rootSlice.actions

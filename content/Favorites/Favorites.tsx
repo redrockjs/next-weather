@@ -1,11 +1,11 @@
 import s from "./styles.module.scss"
 import {useSelector} from "react-redux";
-import {RootState} from "../../store/store";
+import {RootStateType} from "../../store/store";
 import {FavoriteCitiesType} from "../../store/rootSlice";
 
 export function Favorites() {
 
-  const favoriteCities = useSelector<RootState>(state => state.root.rootReducer.favoriteCities) as FavoriteCitiesType[]
+  const favoriteCities = useSelector<RootStateType>(state => state.root.rootReducer.favoriteCities) as FavoriteCitiesType[]
 
   const FavoritesList = favoriteCities.map(item => {
     return (
