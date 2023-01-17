@@ -2,7 +2,7 @@ import s from "./styles.module.scss"
 import {useSession, signIn, signOut} from "next-auth/react"
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {setIsAuth, unsetIsAuth} from "../../store/rootSlice";
+import {setIsAuth, unsetIsAuth, setUid, unsetUid} from "../../store/rootSlice";
 import {RootStateType} from "../../store/store";
 
 export function SignIn() {
@@ -12,17 +12,28 @@ export function SignIn() {
   const rootState = useSelector<RootStateType>(state => state.root.rootReducer)
   const dispatch = useDispatch()
 
-  useEffect(()=>{
-    status === "authenticated" && dispatch(setIsAuth())
-    status === "unauthenticated" && dispatch(unsetIsAuth())
-  },[session,dispatch, status])
+  useEffect(() => {
+    if (status === "authenticated") {
+      dispatch(setIsAuth())
+      dispatch(setUid(session?.uid))
+    }
+    if (status === "unauthenticated") {
+      dispatch(unsetIsAuth())
+      dispatch(unsetUid())
+    }
+  }, [session, dispatch, status])
 
 
   return <>
     <main className={s.signIn}>
       {session ? (
         <>
-          Signed in as {session.user?.name} <br/>
+          <p>
+            Signed in as {session.user?.name}
+          </p>
+          <p>
+            UID: {session?.uid}
+          </p>
           <button onClick={() => signOut()}>Sign out</button>
         </>
       ) : (
@@ -31,8 +42,6 @@ export function SignIn() {
           <button onClick={() => signIn()}>Sign in</button>
         </>
       )}
-
-
     </main>
   </>
 }

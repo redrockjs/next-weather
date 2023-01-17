@@ -85,11 +85,9 @@ const rootSlice = createSlice({
     },
     addFavorites(state, action: PayloadAction<FavoriteCitiesType>) {
       state.favoriteCities.push(action.payload)
-      console.log("Pushed:", action.payload)
     },
     removeFavorites(state, action: PayloadAction<number>) {
       state.favoriteCities = state.favoriteCities.filter(item => item.id !== action.payload)
-      console.log("Filtered:", action.payload)
     },
   },
   extraReducers: (builder) => {
@@ -119,4 +117,4 @@ const rootSlice = createSlice({
 })
 
 export default rootSlice.reducer
-export const {setIsAuth, unsetIsAuth, addFavorites, removeFavorites} = rootSlice.actions
+export const {setIsAuth, unsetIsAuth, setUid, unsetUid, addFavorites, removeFavorites} = rootSlice.actions
