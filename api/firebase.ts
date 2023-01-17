@@ -6,7 +6,7 @@ const ax = axios.create(
     baseURL: process.env.NEXT_PUBLIC_DB_URL,
   });
 
-export let firebaseApi = {
+export const firebaseApi = {
   getStorageItems(uid:string) {
     try {
       return ax.get(`/fav/${uid}.json?auth=${uid}`)

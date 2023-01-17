@@ -9,55 +9,7 @@ import {useSession} from "next-auth/react";
 import {useDispatch, useSelector} from "react-redux";
 import {RootStateType} from "../../store/store";
 import {addFavorites, removeFavorites, FavoriteCitiesType} from "../../store/rootSlice"
-
-type CoordsType = {
-  lat: number
-  lon: number
-}
-
-type APIResponseType = {
-  "coord":
-    {
-      "lon": number,
-      "lat": number
-    },
-  "weather":
-    {
-      "id": number,
-      "main": string,
-      "description": string,
-      "icon": string
-    }[],
-  "base": string,
-  "main": {
-    "temp": number,
-    "feels_like": number,
-    "temp_min": number,
-    "temp_max": number,
-    "pressure": number,
-    "humidity": number
-  },
-  "visibility": number,
-  "wind": {
-    "speed": number,
-    "deg": number
-  },
-  "clouds": {
-    "all": number
-  },
-  "dt": number,
-  "sys": {
-    "type": number,
-    "id": number,
-    "country": string,
-    "sunrise": number,
-    "sunset": number
-  },
-  "timezone": number,
-  "id": number,
-  "name": string,
-  "cod": number
-}
+import {APIResponseType, CoordsType} from "../../types/common-types";
 
 const initialData = {
   "coord": {
@@ -147,14 +99,12 @@ export function Main() {
 
   const handleAddFavorites = (data: APIResponseType) => {
     dispatch(addFavorites({id: data.id, city: data.name, lat: data.coord.lat, lon: data.coord.lon}))
-    console.log(favoriteCities)
   }
 
-  const handleRemoveFavorites = (data: APIResponseType) => {
-    dispatch(removeFavorites(data.id))
-    console.log(favoriteCities)
+  const handleRemoveFavorites = (id: number) => {
+    dispatch(removeFavorites(id))
   }
-
+  console.log(isAuth)
   return <>
     <main className={s.main}>
       <p>
@@ -186,21 +136,20 @@ export function Main() {
             <p>Город - {data.name}</p>
           </div>
 
-          {/*{isAuth &&*/}
+
           <div>
-            {
-              favoriteCities && favoriteCities.some(city => city.id === data.id)
+            {isAuth
+              ? favoriteCities && favoriteCities.some(city => city.id === data.id)
                 ? <Icon icon="mdi:cards-heart" color="red" width="24"
-                        onClick={() => handleRemoveFavorites(data)}
+                        onClick={() => handleRemoveFavorites(data.id)}
                         style={{cursor: "pointer"}}/>
                 : <Icon icon="mdi:cards-heart-outline" color="red" width="24"
                         onClick={() => handleAddFavorites(data)}
                         style={{cursor: "pointer"}}/>
+              : <p></p>
             }
-
-
           </div>
-          {/*}*/}
+
 
         </div>
         <div className={s.mainCardInformation}>

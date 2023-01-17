@@ -3,21 +3,19 @@ import {useSession, signIn, signOut} from "next-auth/react"
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {setIsAuth, unsetIsAuth} from "../../store/rootSlice";
-import {RootState} from "../../store/store";
+import {RootStateType} from "../../store/store";
 
 export function SignIn() {
 
   const {data: session, status} = useSession()
 
-  const rootState = useSelector<RootState>(state => state.root.rootReducer)
+  const rootState = useSelector<RootStateType>(state => state.root.rootReducer)
   const dispatch = useDispatch()
 
   useEffect(()=>{
     status === "authenticated" && dispatch(setIsAuth())
     status === "unauthenticated" && dispatch(unsetIsAuth())
   },[session,dispatch, status])
-
-
 
 
   return <>
