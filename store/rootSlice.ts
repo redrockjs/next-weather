@@ -1,25 +1,29 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {FavoriteCitiesType} from "../types/common-types";
+import {RootStateType} from "./store";
 
 const DB_URL = process.env.NEXT_PUBLIC_DB_URL
 
-export const fetchFavoriteCities = createAsyncThunk<FavoriteCitiesType[], string, { rejectValue: string }>(
+export const fetchFavoriteCities = createAsyncThunk<FavoriteCitiesType[], undefined, { rejectValue: string, state: { uid: string } }>(
   'favoriteCities/fetchFavoriteCities',
-  async (uid, {rejectWithValue}) => {
+  async (_, {rejectWithValue, getState}) => {
+
+    const uid = getState().uid
+
     const response = await fetch(`${DB_URL}/fav/${uid}.json?auth=${uid}`)
 
     if (!response.ok) {
       return rejectWithValue('Server Error!')
     }
 
-    return await response.json()
+    return (await response.json()) as FavoriteCitiesType[]
   })
 
-export const addFavoriteCity = createAsyncThunk<FavoriteCitiesType, FavoriteCitiesType, { rejectValue: string, state: { uid: string } }>(
+export const addFavoriteCity = createAsyncThunk<FavoriteCitiesType, FavoriteCitiesType, { rejectValue: string, state: RootStateType }>(
   'favoriteCities/addFavoriteCity',
   async (city, {rejectWithValue, getState}) => {
 
-    const uid = getState().uid
+    const uid = getState().root.rootReducer.uid
 
     const response = await fetch(`${DB_URL}/fav/${uid}.json?auth=${uid}`, {
       method: 'POST',
@@ -36,11 +40,11 @@ export const addFavoriteCity = createAsyncThunk<FavoriteCitiesType, FavoriteCiti
     return await response.json()
   })
 
-export const removeFavoriteCity = createAsyncThunk<number, number, { rejectValue: string, state: { uid: string } }>(
+export const removeFavoriteCity = createAsyncThunk<number, number, { rejectValue: string, state: RootStateType }>(
   'favoriteCities/removeFavoriteCity',
   async (id, {rejectWithValue, getState}) => {
 
-    const uid = getState().uid
+    const uid = getState().root.rootReducer.uid
 
     const response = await fetch(`${DB_URL}/fav/${uid}/${id}.json?auth=${uid}`, {
       method: 'DELETE'
@@ -103,7 +107,7 @@ const rootSlice = createSlice({
         state.loading = true
       })
       .addCase(addFavoriteCity.fulfilled, (state, action) => {
-        //state.favoriteCities.push(action.payload)
+        state.favoriteCities.push(action.payload)
         state.loading = false
       })
       .addCase(removeFavoriteCity.pending, (state) => {

@@ -8,8 +8,9 @@ import {pressurePascalToMMHg} from "../../utilities/weather";
 import {useSession} from "next-auth/react";
 import {useDispatch, useSelector} from "react-redux";
 import {RootStateType} from "../../store/store";
-import {addFavorites, removeFavorites, FavoriteCitiesType} from "../../store/rootSlice"
-import {APIResponseType, CoordsType} from "../../types/common-types";
+import {addFavoriteCity, addFavorites, removeFavoriteCity, removeFavorites} from "../../store/rootSlice"
+import {APIResponseType, CoordsType, FavoriteCitiesType} from "../../types/common-types";
+import {useAppDispatch} from "../../hook";
 
 const initialData = {
   "coord": {
@@ -63,7 +64,9 @@ export function Main() {
 
   const favoriteCities = useSelector<RootStateType>(state => state.root.rootReducer.favoriteCities) as FavoriteCitiesType[]
 
-  const dispatch = useDispatch()
+  //const dispatch = useDispatch()
+
+  const appDispatch = useAppDispatch()
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -98,11 +101,13 @@ export function Main() {
   }
 
   const handleAddFavorites = (data: APIResponseType) => {
-    dispatch(addFavorites({id: data.id, city: data.name, lat: data.coord.lat, lon: data.coord.lon}))
+    // dispatch(addFavorites({id: data.id, city: data.name, lat: data.coord.lat, lon: data.coord.lon}))
+    appDispatch(addFavoriteCity({id: data.id, city: data.name, lat: data.coord.lat, lon: data.coord.lon}))
   }
 
   const handleRemoveFavorites = (id: number) => {
-    dispatch(removeFavorites(id))
+    // dispatch(removeFavorites(id))
+    appDispatch(removeFavoriteCity(id))
   }
   console.log(isAuth)
   return <>

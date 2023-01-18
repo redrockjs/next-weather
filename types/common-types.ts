@@ -1,5 +1,4 @@
 export type FavoriteCitiesType = {
-  key: string
   id: number
   city: string
   lat: number
