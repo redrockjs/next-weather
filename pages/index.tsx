@@ -1,16 +1,19 @@
-import Head from 'next/head'
-import {Main} from '../content';
-import {Header} from "../layouts";
+import { Default } from '@layouts/index';
+import { Main } from '@view/index';
+import Head from 'next/head';
 
-
-export default function Home() {
-    return (
-        <>
-            <Head>
-                <title>isClowdly2 Weather app</title>
-            </Head>
-            <Header/>
-            <Main/>
-        </>
-    )
+export default function HomePage() {
+  return (
+    <>
+      <Head>
+        <title>isCloudly-Next</title>
+        <meta name="description" content="isCloudly-Next App" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Default>
+        <Main />
+      </Default>
+    </>
+  );
 }

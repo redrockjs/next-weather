@@ -1,0 +1,23 @@
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%inlinecenter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%button {
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  @extend %center;
+}

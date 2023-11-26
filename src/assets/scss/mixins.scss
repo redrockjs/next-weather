@@ -1,0 +1,32 @@
+@mixin ifdesktop {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin iflaptop {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin iftablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}

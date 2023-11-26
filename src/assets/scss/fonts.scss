@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Blacksword';
+  src:
+    local('Blacksword'),
+    url('~assets/fonts/blacksword-regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Granville';
+  src:
+    local('Granville'),
+    url('~assets/fonts/granville-regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish'),
+    url('~assets/fonts/mulish-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish'),
+    url('~assets/fonts/mulish-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish'),
+    url('~assets/fonts/mulish-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
