@@ -1,0 +1,56 @@
+.Container{
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background: url("/images/bg/rain.jpg");
+}
+
+.Wrapper {
+  width: 1400px;
+  height: calc(100% - 20px);
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 20px 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "logo search profile"
+    "menu main main"
+    "menu main main";
+  //border-radius: 15px;
+  //border: 1px solid #cecece;
+  //padding: 20px;
+  //background: #fdfdfd;
+  //box-shadow: 2px 2px 5px 0px #ffffff;
+
+}
+
+.Menu {
+  grid-area: menu;
+  border-radius: 15px;
+  border: 1px solid #cecece;
+  padding: 20px;
+  background: #fdfdfd;
+  box-shadow: 2px 2px 5px 0px #ffffff;
+}
+
+.Logo {
+  grid-area: logo;
+}
+
+.Search {
+  grid-area: search;
+}
+
+.Profile {
+  grid-area: profile;
+}
+
+.Main {
+  grid-area: main;
+  border-radius: 15px;
+  border: 1px solid #cecece;
+  padding: 20px;
+  background: #fdfdfd;
+  box-shadow: 2px 2px 5px 0px #ffffff;
+}
