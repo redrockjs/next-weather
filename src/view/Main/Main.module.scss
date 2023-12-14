@@ -1,8 +1,8 @@
-.Container{
+.Container {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  background: url("/images/bg/rain.jpg");
+  background: url('/images/bg/rain.jpg');
 }
 
 .Wrapper {
@@ -14,15 +14,14 @@
   grid-template-rows: 20px 1fr 1fr;
   gap: 20px 20px;
   grid-template-areas:
-    "logo search profile"
-    "menu main main"
-    "menu main main";
+    'logo search profile'
+    'menu main main'
+    'menu main main';
   //border-radius: 15px;
   //border: 1px solid #cecece;
   //padding: 20px;
   //background: #fdfdfd;
   //box-shadow: 2px 2px 5px 0px #ffffff;
-
 }
 
 .Menu {
