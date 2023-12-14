@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/Menu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="4820" />
+    <option name="totalTimeSeconds" value="5278" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -100,7 +97,7 @@
       <workItem from="1701064348557" duration="2646000" />
       <workItem from="1702538022639" duration="67000" />
       <workItem from="1702538182110" duration="5000" />
-      <workItem from="1702538942816" duration="419000" />
+      <workItem from="1702538942816" duration="1379000" />
     </task>
     <servers />
   </component>
