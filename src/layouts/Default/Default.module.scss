@@ -1,0 +1,64 @@
+.Container {
+  width: 100vw;
+  height: 100vh;
+  background: url('/images/bg/bg.jpg');
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: rem(60px);
+  padding: rem(20px) rem(60px);
+}
+
+.Sidebar {
+  color: #ffffff;
+  border-radius: rem(30px);
+  background: rgba(33, 30, 30, 0.50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(10px);
+  height: 100%;
+
+  & h1 {
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF;
+  }
+
+  & svg:hover {
+    cursor: pointer;
+  }
+
+  &__menu {
+    margin-top: rem(60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40px);
+  }
+
+  &__logout {
+    margin-top: auto;
+    margin-bottom: rem(60px);
+  }
+}
+
+.Main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.Top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Content {
+  display: flex;
+}

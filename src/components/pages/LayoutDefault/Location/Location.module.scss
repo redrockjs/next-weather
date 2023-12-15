@@ -1,0 +1,14 @@
+.Location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: rem(8px);
+
+  & p {
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+  }
+}
