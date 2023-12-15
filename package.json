@@ -16,7 +16,12 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {},
+  "lint-staged": {
+    "**/*.(js|jsx|ts|tsx)": [
+      "npm run prettier",
+      "npm run lint:fix"
+    ]
+  },
   "dependencies": {
     "clsx": "^2.0.0",
     "next": "14.0.3",
