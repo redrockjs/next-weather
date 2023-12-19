@@ -1,10 +1,9 @@
-.Search{
-
+.Search {
   @include iflaptop {
     min-width: rem(400px);
   }
 
-  @include ifdesktop{
+  @include ifdesktop {
     min-width: rem(600px);
   }
 }

@@ -5,28 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/restore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/settings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/signin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/signup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/City/City.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Favorites/Favorites.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Restore/Restore.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Restore/Restore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SignIn/SignIn.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SignIn/SignIn.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Cities/Cities.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/city/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Cities/Cities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/City/City.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Explore/Explore.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Explore/Explore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Favorites/Favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +41,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="24779" />
+    <option name="totalTimeSeconds" value="26420" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -66,29 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.20.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.68&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\dev-projects\\next-weather\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "16.20.2",
+    "javascript.nodejs.core.library.typings.version": "16.18.68",
+    "last_opened_file_path": "C:/dev-projects/next-weather/pages",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\dev-projects\\next-weather\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev-projects\next-weather\pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -124,7 +136,9 @@
       <workItem from="1702622098065" duration="14047000" />
       <workItem from="1702965833953" duration="35000" />
       <workItem from="1702965893568" duration="5291000" />
-      <workItem from="1702971521603" duration="5898000" />
+      <workItem from="1702971521603" duration="6048000" />
+      <workItem from="1702980689750" duration="512000" />
+      <workItem from="1702982873634" duration="2658000" />
     </task>
     <servers />
   </component>

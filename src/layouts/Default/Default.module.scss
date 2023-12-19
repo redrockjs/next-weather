@@ -8,14 +8,14 @@
   grid-template-columns: 1fr;
   grid-template-rows: rem(100px) rem(80px) auto;
   grid-template-areas:
-    "top"
-    "search"
-    "main";
+    'top'
+    'search'
+    'main';
 
   @include iftablet {
     grid-template-areas:
-    "top"
-    "main";
+      'top'
+      'main';
   }
 
   @include ifdesktop {
@@ -23,8 +23,8 @@
     grid-template-rows: rem(100px) auto;
     gap: rem(30px) rem(60px);
     grid-template-areas:
-    "sidebar top"
-    "sidebar main";
+      'sidebar top'
+      'sidebar main';
     padding: rem(20px) rem(60px);
   }
 }
@@ -86,7 +86,7 @@
 .TopMobile {
   grid-area: top;
   border-radius: 30px;
-  background: rgba(33, 30, 30, 0.50);
+  background: rgba(33, 30, 30, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
