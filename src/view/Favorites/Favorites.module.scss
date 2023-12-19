@@ -1,0 +1,42 @@
+.Favorites {
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.50);
+  padding: rem(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__city {
+    width: 50%;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    & img {
+      width: rem(61px);
+      height: rem(61px);
+    }
+
+    & p {
+      font-size: rem(24px);
+      font-weight: 700;
+      line-height: normal;
+      color: #FFF;
+    }
+
+    & span {
+      margin-left: rem(16px);
+    }
+  }
+}
+
+.CloseIcon {
+  cursor: pointer;
+  margin-left: auto;
+  width: rem(39px);
+  height: rem(39px);
+}

@@ -1,0 +1,19 @@
+.Settings {
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.50);
+  padding: rem(40px);
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+    & p {
+      font-size: rem(20px);
+      font-weight: 400;
+      line-height: normal;
+      color: #FFF;
+    }
+  }
+}
