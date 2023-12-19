@@ -1,17 +1,23 @@
 @mixin ifdesktop {
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: $desktop-width) {
     @content;
   }
 }
 
 @mixin iflaptop {
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: $laptop-width) {
     @content;
   }
 }
 
 @mixin iftablet {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin ifmobile {
+  @media only screen and (min-width: 0px) {
     @content;
   }
 }

@@ -5,10 +5,18 @@
   gap: rem(8px);
 
   & p {
-    font-size: rem(24px);
+    font-size: rem(20px);
     font-weight: 700;
     line-height: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    color: #FFF;
+    color: #fff;
+    @include iftablet{
+      font-size: rem(24px);
+    }
   }
+}
+
+.LocationIcon {
+  width: rem(42px);
+  height: rem(48px);
 }

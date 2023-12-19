@@ -5,33 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/avatar/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +35,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="16330" />
+    <option name="totalTimeSeconds" value="24779" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -48,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -126,7 +121,10 @@
       <workItem from="1702538182110" duration="5000" />
       <workItem from="1702538942816" duration="2419000" />
       <workItem from="1702543499978" duration="708000" />
-      <workItem from="1702622098065" duration="13768000" />
+      <workItem from="1702622098065" duration="14047000" />
+      <workItem from="1702965833953" duration="35000" />
+      <workItem from="1702965893568" duration="5291000" />
+      <workItem from="1702971521603" duration="5898000" />
     </task>
     <servers />
   </component>

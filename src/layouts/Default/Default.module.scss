@@ -2,30 +2,53 @@
   width: 100vw;
   height: 100vh;
   background: url('/images/bg/bg.jpg');
+  padding: rem(20px) rem(20px);
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  gap: rem(60px);
-  padding: rem(20px) rem(60px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: rem(100px) rem(80px) auto;
+  grid-template-areas:
+    "top"
+    "search"
+    "main";
+
+  @include iftablet {
+    grid-template-areas:
+    "top"
+    "main";
+  }
+
+  @include ifdesktop {
+    grid-template-columns: rem(100px) 1fr;
+    grid-template-rows: rem(100px) auto;
+    gap: rem(30px) rem(60px);
+    grid-template-areas:
+    "sidebar top"
+    "sidebar main";
+    padding: rem(20px) rem(60px);
+  }
 }
 
 .Sidebar {
-  color: #ffffff;
-  border-radius: rem(30px);
-  background: rgba(33, 30, 30, 0.50);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: rem(10px);
-  height: 100%;
+  display: none;
+
+  @include ifdesktop {
+    grid-area: sidebar;
+    color: #ffffff;
+    border-radius: rem(30px);
+    background: rgba(33, 30, 30, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(10px);
+    height: 100%;
+  }
 
   & h1 {
     font-size: rem(14px);
     font-weight: 700;
     line-height: normal;
-    color: #FFF;
+    color: #fff;
   }
 
   & svg:hover {
@@ -46,19 +69,99 @@
   }
 }
 
-.Main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: rem(20px);
+.Top {
+  display: none;
+  @include ifdesktop {
+    display: flex;
+    grid-area: top;
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20px);
+  }
 }
 
-.Top {
+.TopMobile {
+  grid-area: top;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.50);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & h1 {
+      display: none;
+      @include iftablet {
+        display: block;
+        font-size: rem(14px);
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+      }
+    }
+  }
+
+  &__search {
+    display: none;
+    @include iftablet {
+      display: block;
+    }
+  }
+
+  @include ifdesktop {
+    display: none;
+  }
 }
 
-.Content {
-  display: flex;
+.SearchMobile {
+  grid-area: search;
+  margin: 10px 0;
+  @include iftablet {
+    display: none;
+  }
+}
+
+.Main {
+  grid-area: main;
+  display: block;
+}
+
+.LogoIcon {
+  width: rem(80px);
+  height: rem(80px);
+}
+
+.DashIcon {
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.FavoritesIcon {
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.SettingsIcon {
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.LogoutIcon {
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.MenuIcon {
+  width: rem(67px);
+  height: rem(67px);
 }

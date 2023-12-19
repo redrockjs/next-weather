@@ -1,7 +1,25 @@
-.Input{
-  border: 1px solid red;
+.Input {
+  border: none;
   border-radius: 30px;
-  padding: 10px;
+  padding: rem(10px);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
-  background: #FFFFFF;
+  background: #ffffff;
+  height: rem(48px);
+
+  & div {
+    box-shadow: none;
+  }
+
+  & input {
+    margin-left: rem(10px);
+  }
+
+  &__search {
+    cursor: pointer;
+  }
+}
+
+.SearchIcon {
+  width: rem(43px);
+  height: rem(43px);
 }

@@ -1,10 +1,10 @@
 import s from './Location.module.scss';
-import { MapIcon } from '@pages/LayoutDefault/Location/Location.svg';
+import { MapIcon } from './Location.svg';
 
 function Location() {
   return (
     <div className={s.Location}>
-      <MapIcon />
+      <MapIcon className={s.LocationIcon} />
       <p>Russia, Sochi</p>
     </div>
   );

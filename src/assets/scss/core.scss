@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+html {
+  font-size: math.div(16, 360) * 100vw;
+  line-height: normal;
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+@media screen and (max-aspect-ratio: 1366/720) {
+  html {
+    font-size: math.div(16, 1366) * 100vw;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-aspect-ratio: 1366/720) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-height: 720px) and (min-aspect-ratio: 1366/720) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  @include ifmobile {
+    font-size: math.div(10, 360) * 100vw;
+  }
+  @include iftablet {
+    font-size: math.div(16, 768) * 100vw;
+  }
+  @include iflaptop {
+    font-size: math.div(16, 1024) * 100vw;
+  }
+  @include ifdesktop {
+    font-size: math.div(16, 1920) * 100vw;
+  }
+}
+
+

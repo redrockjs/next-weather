@@ -1,5 +1,12 @@
-export const SearchIcon = () => (
-  <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const SearchIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    width="43"
+    height="43"
+    viewBox="0 0 43 43"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_5_75)">
       <mask
         id="mask0_5_75"

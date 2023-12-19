@@ -1,3 +1,4 @@
+import s from './Search.module.scss';
 import InputSearch from '@ui/InputSearch/InputSearch';
 import { useEffect, useState } from 'react';
 
@@ -8,9 +9,13 @@ function Search() {
     console.log(search);
   }, [search]);
 
+  const handleSearch = () => {
+    console.log('click');
+  };
+
   return (
     <>
-      <InputSearch onChange={setSearch} />
+      <InputSearch className={s.Search} onChange={setSearch} onSearch={handleSearch} />
     </>
   );
 }
