@@ -1,7 +1,7 @@
 .Favorites {
   height: 100%;
   border-radius: 30px;
-  background: rgba(33, 30, 30, 0.50);
+  background: rgba(33, 30, 30, 0.5);
   padding: rem(40px);
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
       font-size: rem(24px);
       font-weight: 700;
       line-height: normal;
-      color: #FFF;
+      color: #fff;
     }
 
     & span {

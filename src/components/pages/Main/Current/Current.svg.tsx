@@ -1,6 +1,4 @@
-type SVGProps = {
-  className?: string;
-};
+import { SVGProps } from '@constants/types/types';
 
 export const WindIcon = ({ className }: SVGProps) => (
   <svg

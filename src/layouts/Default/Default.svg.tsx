@@ -1,4 +1,6 @@
-export const Logo = ({ className }: { className?: string }) => (
+import { SVGIconProps } from '@constants/types/types';
+
+export const Logo = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="80"
@@ -21,7 +23,7 @@ export const Logo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const DashIcon = ({ className }: { className?: string }) => (
+export const DashIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="40"
@@ -44,7 +46,7 @@ export const DashIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const FavoritesIcon = ({ className }: { className?: string }) => (
+export const FavoritesIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -60,7 +62,7 @@ export const FavoritesIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const SettingsIcon = ({ className }: { className?: string }) => (
+export const SettingsIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -84,7 +86,7 @@ export const SettingsIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const LogoutIcon = ({ className }: { className?: string }) => (
+export const LogoutIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -107,7 +109,7 @@ export const LogoutIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const MenuIcon = ({ className }: { className?: string }) => (
+export const MenuIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="67"

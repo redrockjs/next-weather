@@ -1,4 +1,6 @@
-export const CloseIcon = ({ className }: { className?: string }) => (
+import { SVGIconProps } from '@constants/types/types';
+
+export const CloseIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="39"

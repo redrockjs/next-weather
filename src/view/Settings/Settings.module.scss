@@ -1,7 +1,7 @@
 .Settings {
   height: 100%;
   border-radius: 30px;
-  background: rgba(33, 30, 30, 0.50);
+  background: rgba(33, 30, 30, 0.5);
   padding: rem(40px);
 
   &__row {
@@ -13,7 +13,7 @@
       font-size: rem(20px);
       font-weight: 400;
       line-height: normal;
-      color: #FFF;
+      color: #fff;
     }
   }
 }
