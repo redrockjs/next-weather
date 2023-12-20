@@ -61,7 +61,7 @@ const Default = ({ children }: Props) => {
         <Search />
       </div>
 
-      <div className={s.Main}>{children}</div>
+      <div className={s.Wrapper}>{children}</div>
     </div>
   );
 };

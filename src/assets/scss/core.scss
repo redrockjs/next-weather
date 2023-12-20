@@ -15,13 +15,15 @@ html {
 
 @media only screen and (min-width: 1366px) and (max-aspect-ratio: 1366/720) {
   html {
-    font-size: 16px;
+    font-size: math.div(16, 1366) * 100vw;
+    //font-size: 16px;
   }
 }
 
 @media only screen and (min-height: 720px) and (min-aspect-ratio: 1366/720) {
   html {
-    font-size: 16px;
+    font-size: math.div(16, 1366) * 100vw;
+    //font-size: 16px;
   }
 }
 
@@ -30,7 +32,7 @@ html {
     font-size: math.div(10, 360) * 100vw;
   }
   @include iftablet {
-    font-size: math.div(16, 768) * 100vw;
+    font-size: math.div(12, 768) * 100vw;
   }
   @include iflaptop {
     font-size: math.div(16, 1024) * 100vw;

@@ -24,10 +24,10 @@ export const todayWeatherData = [
 ];
 
 export const weekWeatherData = [
-  { day: '27.11.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
-  { day: '28.11.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
-  { day: '29.11.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
-  { day: '30.11.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
-  { day: '1.12.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
-  { day: '2.12.2023', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Mon 27', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Tue 28', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Wed 29', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Thu 30', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Fri 1', weather: 'rain', tempMin: 11, tempMax: 14 },
+  { day: 'Sat 2', weather: 'rain', tempMin: 11, tempMax: 14 },
 ];

@@ -1,7 +1,9 @@
 .Container {
   width: 100vw;
-  height: 100vh;
-  background: url('/images/bg/bg.jpg');
+  //height: 100vh;
+  min-height: 100vh;
+  background: url('/images/bg/bg.jpg') no-repeat center center;
+  background-size: cover;
   padding: rem(20px) rem(20px);
 
   display: grid;
@@ -91,7 +93,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: rem(20px);
 
   &__logo {
     display: flex;
@@ -125,15 +127,20 @@
 
 .SearchMobile {
   grid-area: search;
-  margin: 10px 0;
+  margin: rem(10px) 0;
   @include iftablet {
     display: none;
   }
 }
 
-.Main {
+.Wrapper {
   grid-area: main;
-  display: block;
+  @include iftablet {
+    margin-top: rem(30px);
+  }
+  @include ifdesktop {
+    margin-top: 0;
+  }
 }
 
 .LogoIcon {

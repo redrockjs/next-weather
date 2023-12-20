@@ -6,25 +6,43 @@
   flex-direction: row;
   justify-content: space-between;
   gap: rem(10px);
-  padding: 0 rem(20px);
+
+  padding: 0 rem(10px);
+
+  @include iftablet{
+    padding: rem(10px) rem(20px);
+  }
 
   &__item {
+    border-radius: 30px;
+    background: rgba(33, 30, 30, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: rem(10px) rem(20px);
+    padding: rem(10px);
+    @include iftablet{
+      padding: rem(10px) rem(20px);
+    }
   }
 
   &__text {
-    font-size: rem(24px);
-    font-weight: 700;
+    font-size: rem(18px);
+    font-weight: 400;
     line-height: normal;
-    color: #FFF;
+    color: #fff;
+    @include iftablet{
+      font-size: rem(24px);
+      font-weight: 700;
+    }
   }
 
   &__image {
-    width: rem(100px);
-    height: rem(100px);
+    width: rem(45px);
+    height: rem(45px);
+    @include iftablet {
+      width: rem(100px);
+      height: rem(100px);
+    }
   }
 }

@@ -1,27 +1,45 @@
 .Widget {
   border-radius: 30px;
   background: rgba(33, 30, 30, 0.5);
-  width: rem(550px);
+  width: 100%;
   padding: rem(20px) rem(40px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   gap: rem(4px);
 
+  @include iftablet{
+    width: rem(470px);
+  }
+
+  @include ifdesktop {
+    width: rem(550px);
+  }
+
   &__image {
     & img {
-      width: rem(162px);
-      height: rem(162px);
+      width: rem(122px);
+      height: rem(122px);
+
+      @include ifdesktop {
+        width: rem(162px);
+        height: rem(162px);
+      }
     }
   }
 
   &__temp {
     justify-self: end;
-    font-size: rem(80px);
+    font-size: rem(72px);
     font-weight: 700;
     line-height: normal;
     color: #fff;
-    margin-right: rem(24px);
+
+    @include ifdesktop {
+      font-size: rem(80px);
+      margin-right: rem(24px);
+    }
+
 
     & p:nth-child(2) {
       font-size: rem(24px);
@@ -36,14 +54,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: rem(24px);
+    font-size: rem(20px);
     font-weight: 700;
     line-height: normal;
     color: #fff;
-    gap: rem(20px);
+    gap: rem(10px);
+
+    @include ifdesktop{
+      font-size: rem(24px);
+      gap: rem(20px);
+    }
   }
 }
-
 
 .WindIcon {
   width: rem(50px);

@@ -6,9 +6,12 @@
 
   &__top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     gap: rem(20px);
+
+    @include iftablet {
+      flex-direction: row;
+    }
   }
 }
-

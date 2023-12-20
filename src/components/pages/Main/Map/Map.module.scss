@@ -1,6 +1,18 @@
 .Map {
-  & img {
-    width: rem(699px);
-    height: rem(368px);
+  border-radius: 30px;
+
+  &__image {
+    width: 100%;
+    height: auto;
+
+    @include iftablet {
+      width: rem(474px);
+      height: rem(368px);
+    }
+
+    @include ifdesktop {
+      width: rem(699px);
+      height: rem(368px);
+    }
   }
 }
