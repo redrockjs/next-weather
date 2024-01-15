@@ -8,7 +8,7 @@
   grid-template-rows: repeat(4, auto);
   gap: rem(4px);
 
-  @include iftablet{
+  @include iftablet {
     width: rem(470px);
   }
 
@@ -40,7 +40,6 @@
       margin-right: rem(24px);
     }
 
-
     & p:nth-child(2) {
       font-size: rem(24px);
       font-weight: 700;
@@ -60,7 +59,7 @@
     color: #fff;
     gap: rem(10px);
 
-    @include ifdesktop{
+    @include ifdesktop {
       font-size: rem(24px);
       gap: rem(20px);
     }

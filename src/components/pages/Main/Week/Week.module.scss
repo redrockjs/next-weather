@@ -9,7 +9,7 @@
 
   padding: 0 rem(10px);
 
-  @include iftablet{
+  @include iftablet {
     padding: rem(10px) rem(20px);
   }
 
@@ -21,7 +21,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: rem(10px);
-    @include iftablet{
+    @include iftablet {
       padding: rem(10px) rem(20px);
     }
   }
@@ -31,7 +31,7 @@
     font-weight: 400;
     line-height: normal;
     color: #fff;
-    @include iftablet{
+    @include iftablet {
       font-size: rem(24px);
       font-weight: 700;
     }

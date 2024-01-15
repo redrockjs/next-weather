@@ -1,3 +1,4 @@
+import { Switch } from '@ui/index';
 import s from './Settings.module.scss';
 
 function Settings() {
@@ -5,6 +6,7 @@ function Settings() {
     <div className={s.Settings}>
       <div className={s.Settings__row}>
         <p>Temperature</p>
+        <Switch />
       </div>
       <div className={s.Settings__row}>
         <p>Wind force</p>
