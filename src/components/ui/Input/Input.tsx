@@ -13,6 +13,7 @@ function Input({ className, placeholder, onChange, value }: InputProps) {
   return (
     <TextField.Root className={clsx(s.Input, className)}>
       <TextField.Input
+        variant="surface"
         placeholder={placeholder}
         radius="full"
         value={value}

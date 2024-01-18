@@ -1,2 +1,25 @@
 .Input {
+  border: none;
+  border-radius: 30px;
+  padding: rem(7px) rem(15px);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  height: rem(40px);
+  background: rgba(0, 0, 0, 0.50);
+
+  & input {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    &::placeholder {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: normal;
+      color: #FFFFFF;
+    }
+  }
+
+  & div {
+    box-shadow: none;
+  }
 }

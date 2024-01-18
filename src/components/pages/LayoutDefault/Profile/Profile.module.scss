@@ -25,4 +25,30 @@
       border-radius: 50%;
     }
   }
+
+  &__menu {
+    & button {
+      padding: rem(4px);
+      margin: rem(4px);
+      font-size: rem(16px);
+      color: #FFFFFF;
+      &:hover{
+        color: #DDDDDD;
+      }
+    }
+    & span{
+      padding: rem(4px);
+      margin: rem(4px);
+      font-size: rem(16px);
+      color: #FFFFFF;
+    }
+
+    &__btn {
+      border: 2px solid #FFFFFF;
+      border-radius: 8px;
+      &:hover{
+        border: 2px solid #DDDDDD;
+      }
+    }
+  }
 }

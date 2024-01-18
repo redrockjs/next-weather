@@ -1,0 +1,49 @@
+.SignUp {
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.5);
+  padding: rem(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__header {
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF;
+  }
+
+  &__account {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    color: #FFF;
+  }
+
+  &__login {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    color: #C0B6E5;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: rem(391px);
+    margin-bottom: 16px;
+    &_sub {
+      justify-content: space-between;
+      width: 260px;
+    }
+  }
+
+  &__input {
+
+  }
+}

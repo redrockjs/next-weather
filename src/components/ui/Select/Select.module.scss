@@ -1,0 +1,173 @@
+.Root {
+  position: relative;
+  width: 100%;
+}
+
+.Placeholder {
+  color: #FFFFFF;
+}
+
+.Select {
+  position: relative;
+  box-sizing: border-box;
+  height: rem(40px);
+  padding: rem(7px) rem(16px);
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.50);
+
+  //font-family: Arial;
+  font-size: rem(20px);
+  font-weight: 400;
+  line-height: normal;
+
+  text-overflow: ellipsis;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 8px;
+  border-bottom: 1px solid rgba(5, 4, 5, 0.3);
+  min-width: rem(110px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: rem(12px);
+    right: rem(12px);
+    width: rem(20px);
+    height: rem(20px);
+    background: url('/images/svg/chevron.svg') no-repeat center;
+    transition: transform linear 150ms;
+  }
+}
+
+.Colorless {
+  &.Select {
+    color: lightgray;
+    background: transparent;
+    border: none;
+    height: rem(36px);
+    padding: rem(8px) rem(36px) rem(8px) rem(16px);
+
+    &::after {
+      top: 0.45rem;
+      right: 0.45rem;
+    }
+  }
+}
+
+.Disabled {
+  cursor: auto;
+  background: grey;
+}
+
+.ErrorSelect {
+  border: 1px solid red !important;
+}
+
+.OpenSelect {
+  composes: Select;
+  //border-bottom: 2px solid #a61613;
+
+  &::after {
+    transform: rotate(-180deg);
+  }
+}
+
+.List {
+  position: absolute;
+  transform-origin: top;
+  min-width: 100%;
+  padding: rem(4px) 0;
+  max-height: rem(350px);
+  margin-top: rem(3px);
+  overflow-y: auto;
+  z-index: 5;
+
+  border-radius: 8px;
+  border: 1px solid #dedede;
+  background: #ebebeb;
+  box-shadow: 0px 12px 12px -8px rgba(0, 0, 0, 0.25);
+
+  &::-webkit-scrollbar {
+    width: 4px; /* толщина скролбара */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ebebeb; /* цвет зоны отслеживания */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ebebeb; /* цвет бегунка */
+    border-radius: 20px; /* округлось бегунка */
+    border: 3px solid rgba(26, 26, 26, 0.2); /* отступ вокруг бегунка */
+  }
+}
+
+.ListFull {
+  composes: List;
+  max-height: none;
+}
+
+.ListEnter {
+  transform: scaleY(0);
+  transition: transform linear 150ms;
+}
+
+.ListEnterActive {
+  transform: scaleY(1);
+  transition: transform linear 150ms;
+}
+
+.ListExit {
+  transform: scaleY(1);
+}
+
+.ListExitActive {
+  transform: scaleY(0);
+  transition: transform linear 150ms;
+}
+
+.Item {
+  height: rem(44px);
+  display: flex;
+  align-items: center;
+  padding: 0 rem(16px);
+  white-space: nowrap;
+  cursor: pointer;
+
+  //font-family: Arial;
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: 160%;
+  color: rgba(26, 26, 26, 0.6);
+
+  &:hover {
+    background: #ffffff;
+  }
+}
+
+.ActiveItem {
+  composes: Item;
+  background: url('/images/svg/checked.svg') no-repeat 95% 40%;
+  background-size: rem(24px);
+  color: rgba(26, 26, 26, 0.9);
+
+  &:hover {
+    background: url('/images/svg/checked.svg') no-repeat 95% 40%,
+    #ffffff;
+    background-size: rem(24px);
+    color: rgba(26, 26, 26, 0.9);
+  }
+}
+
+.Description {
+  margin-top: 0.125rem;
+  font-size: 0.6875rem;
+  line-height: 0.75rem;
+}
+
+.DescriptionError {
+  composes: Description;
+
+  color: red;
+}
