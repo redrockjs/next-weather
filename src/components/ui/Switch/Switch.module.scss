@@ -1,11 +1,13 @@
 .Switch {
+  position: relative;
   display: flex;
   flex-direction: row;
-  background: #D9D9D9;
+  background: #d9d9d9;
   width: 140px;
   margin-left: 20px;
 
   &__item {
+    cursor: pointer;
     box-sizing: border-box;
     white-space: nowrap;
     flex-wrap: nowrap;
@@ -13,8 +15,19 @@
     width: 50%;
     text-align: center;
     padding: 2px 8px;
-    &_active{
-      background: #2F89FC;
+    z-index: 3;
+  }
+  &__selection {
+    position: absolute;
+    background: #2f89fc;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    transition: all ease-in-out 0.3s;
+    &_on {
+      transform: translateX(100%);
+      transition: all ease-in-out 0.3s;
     }
   }
 }

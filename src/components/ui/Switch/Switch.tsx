@@ -1,17 +1,23 @@
 import s from './Switch.module.scss';
+import clsx from 'clsx';
 
-type Props = {
+type SwitchProps = {
   classname?: string;
-  values?: [string, string];
-  selectedValue?: string;
-  onChange?: () => void;
+  values: [string, string];
+  selectedValue: string;
+  onChange: (value: string) => void;
 };
 
-function Switch({ values, selectedValue, onChange }: Props) {
+function Switch({ values, selectedValue, onChange }: SwitchProps) {
+  const toggleSwitch = () => onChange(selectedValue !== values[0] ? values[0] : values[1]);
+
   return (
-    <div className={s.Switch}>
-      <div className={s.Switch__item + ' ' + s.Switch__item_active}>mmHg</div>
-      <div className={s.Switch__item}>GPa</div>
+    <div className={s.Switch} onClick={toggleSwitch}>
+      <div
+        className={clsx(s.Switch__selection, selectedValue !== values[0] && s.Switch__selection_on)}
+      ></div>
+      <div className={s.Switch__item}>{values[0]}</div>
+      <div className={s.Switch__item}>{values[1]}</div>
     </div>
   );
 }
