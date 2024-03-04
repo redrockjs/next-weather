@@ -1,0 +1,154 @@
+.SignIn {
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.5);
+  padding: rem(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__header {
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    margin-bottom: rem(18px);
+  }
+
+  &__account {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    color: #fff;
+  }
+
+  &__login {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    color: #c0b6e5;
+    a {
+      color: #c0b6e5;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: rem(391px);
+    margin-bottom: rem(38px);
+
+    &_sub {
+      justify-content: space-between;
+      width: rem(260px);
+    }
+
+    &_center {
+      justify-content: center;
+    }
+
+    &_line {
+      padding-top: rem(60px);
+      padding-bottom: rem(20px);
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: rem(-20px);
+      transform: translateY(-50%);
+      width: rem(44px);
+      height: rem(44px);
+    }
+  }
+
+  &__line {
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    text-align: center;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      background: #ffffff;
+    }
+
+    &:before {
+      right: 120%;
+      left: -200%;
+    }
+
+    &:after {
+      left: 120%;
+      right: -200%;
+    }
+  }
+}
+
+.SignInBtn {
+  min-width: rem(310px);
+}
+
+.FacebookBtn {
+  position: relative;
+  background: #1877f2cc;
+  font-size: rem(16px);
+  font-weight: 600;
+  line-height: rem(24px);
+  color: #ffffffe6;
+  text-align: left;
+  min-width: rem(310px);
+
+  &:hover {
+    background: #1877f2;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: rem(10px);
+    transform: translateY(-50%);
+    width: rem(26px);
+    height: rem(26px);
+  }
+}
+
+.GoogleBtn {
+  position: relative;
+  background: #ffffffcc;
+  font-size: rem(16px);
+  font-weight: 600;
+  line-height: rem(24px);
+  color: #00000099;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  min-width: rem(310px);
+
+  &:hover {
+    background: #ffffff;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: rem(10px);
+    transform: translateY(-50%);
+    width: rem(26px);
+    height: rem(26px);
+  }
+}

@@ -1,0 +1,44 @@
+.Restore {
+  height: 100%;
+  border-radius: 30px;
+  background: rgba(33, 30, 30, 0.5);
+  padding: rem(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__header {
+    font-size: rem(24px);
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    margin-top: rem(160px);
+    margin-bottom: rem(50px);
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: rem(391px);
+    margin-bottom: rem(38px);
+
+    &_center {
+      justify-content: center;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: rem(-20px);
+      transform: translateY(-50%);
+      width: rem(44px);
+      height: rem(44px);
+    }
+  }
+}
+
+.RestoreBtn {
+  min-width: rem(310px);
+}

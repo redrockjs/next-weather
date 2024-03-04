@@ -8,11 +8,11 @@
 
   & input {
     color: #ffffff;
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 400;
     line-height: normal;
     &::placeholder {
-      font-size: 24px;
+      font-size: rem(24px);
       font-weight: 400;
       line-height: normal;
       color: #ffffff;

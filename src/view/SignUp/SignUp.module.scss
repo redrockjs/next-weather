@@ -30,9 +30,18 @@
     line-height: normal;
     text-decoration-line: underline;
     color: #c0b6e5;
+
+    a {
+      color: #c0b6e5;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
   }
 
   &__row {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -49,8 +58,17 @@
     }
 
     &_line {
-      padding-top: 60px;
-      padding-bottom: 20px;
+      padding-top: rem(60px);
+      padding-bottom: rem(20px);
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: rem(-20px);
+      transform: translateY(-50%);
+      width: rem(44px);
+      height: rem(44px);
     }
   }
 
@@ -61,7 +79,7 @@
     font-size: rem(16px);
     font-weight: 600;
     line-height: normal;
-    color: #FFF;
+    color: #fff;
     text-align: center;
 
     &:before,
@@ -70,7 +88,7 @@
       position: absolute;
       top: 50%;
       height: 1px;
-      background: #FFFFFF;
+      background: #ffffff;
     }
 
     &:before {
@@ -91,16 +109,16 @@
 
 .FacebookBtn {
   position: relative;
-  background: #1877F2CC;
+  background: #1877f2cc;
   font-size: rem(16px);
   font-weight: 600;
   line-height: rem(24px);
-  color: #FFFFFFE6;
+  color: #ffffffe6;
   text-align: left;
   min-width: rem(310px);
 
   &:hover {
-    background: #1877F2;
+    background: #1877f2;
   }
 
   svg {
@@ -115,7 +133,7 @@
 
 .GoogleBtn {
   position: relative;
-  background: #FFFFFFCC;
+  background: #ffffffcc;
   font-size: rem(16px);
   font-weight: 600;
   line-height: rem(24px);
@@ -125,7 +143,7 @@
   min-width: rem(310px);
 
   &:hover {
-    background: #FFFFFF;
+    background: #ffffff;
   }
 
   svg {
