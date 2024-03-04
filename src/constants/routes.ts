@@ -7,3 +7,8 @@ export enum RoutesEnum {
   RESTORE = '/restore',
   CITY = '/city',
 }
+
+export enum BackendRoutesEnum {
+  SIGNIN = '/account/sessions/email',
+  GET_ACCOUNT = '/account',
+}

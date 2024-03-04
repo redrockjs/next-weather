@@ -5,10 +5,103 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/mutations/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/mutations/useSessionMutation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/queries/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/queries/useAccountQuery.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/useUserStore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/SignIn/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignIn/SignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/hello.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/hello.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/city/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/city/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/restore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/restore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/Menu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Location/Location.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Current/Current.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Map/Map.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Map/Map.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Map/Map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Today/Today.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Today/Today.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Today/Today.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Today/Today.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Week/Week.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Week/Week.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Week/Week.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Week/Week.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Hidden/Hidden.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/InputSearch/InputSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Select/Select.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Select/Select.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Select/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Switch/Switch.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Switch/Switch.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Switch/Switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Switch/Switch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Visible/Visible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Visible/Visible.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/Facebook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/Facebook.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/Google.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/Google.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/Lock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/Lock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/Mail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/Mail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/Person.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/Person.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Empty/Empty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Empty/Empty.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/City/City.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/City/City.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Favorites/Favorites.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Favorites/Favorites.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Favorites/Favorites.svg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Favorites/Favorites.svg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Favorites/Favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Favorites/Favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.defaults.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.defaults.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Restore/Restore.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Restore/Restore.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Restore/Restore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Restore/Restore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Settings/Settings.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Settings/Settings.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Settings/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Settings/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SignIn/SignIn.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignIn/SignIn.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SignUp/SignUp.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/SignUp/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +109,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="55967" />
+    <option name="totalTimeSeconds" value="62863" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -24,8 +117,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -76,6 +169,7 @@
       <recent name="C:\dev-projects\next-weather\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev-projects\next-weather\src\api\mutations" />
       <recent name="C:\dev-projects\next-weather\public\images\svg" />
     </key>
   </component>
@@ -126,7 +220,7 @@
       <workItem from="1705650822808" duration="1181000" />
       <workItem from="1706594728837" duration="16000" />
       <workItem from="1709536448545" duration="4816000" />
-      <workItem from="1709568756335" duration="612000" />
+      <workItem from="1709568756335" duration="9613000" />
     </task>
     <servers />
   </component>

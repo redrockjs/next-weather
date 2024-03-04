@@ -24,15 +24,19 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.2",
+    "@tanstack/react-query": "^5.24.8",
+    "@tanstack/react-query-devtools": "^5.24.8",
     "clsx": "^2.0.0",
     "next": "14.0.3",
     "next-images": "^1.8.5",
     "react": "^18",
     "react-dom": "^18",
     "react-transition-group": "^4.4.5",
-    "react-use": "^17.4.2"
+    "react-use": "^17.4.2",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.20.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
