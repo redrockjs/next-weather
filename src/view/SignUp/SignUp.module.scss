@@ -20,8 +20,12 @@
     font-size: rem(16px);
     font-weight: 500;
     line-height: normal;
-    text-decoration-line: underline;
+    //text-decoration-line: underline;
     color: #fff;
+
+    &_padding{
+      margin-top: 80px;
+    }
   }
 
   &__login {

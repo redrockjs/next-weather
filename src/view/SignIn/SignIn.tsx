@@ -9,7 +9,7 @@ function SignIn() {
   return (
     <>
       <div className={s.SignIn}>
-        <h2 className={s.SignIn__header}>Sign up</h2>
+        <h2 className={s.SignIn__header}>Sign in</h2>
         <div className={clsx(s.SignIn__row, s.SignIn__row_sub)}>
           <p className={s.SignIn__account}>Don't have an account? </p>
           <p className={s.SignIn__login}>
