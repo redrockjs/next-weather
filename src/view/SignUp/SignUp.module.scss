@@ -12,7 +12,8 @@
     font-size: rem(24px);
     font-weight: 700;
     line-height: normal;
-    color: #FFF;
+    color: #fff;
+    margin-bottom: rem(18px);
   }
 
   &__account {
@@ -20,7 +21,7 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
-    color: #FFF;
+    color: #fff;
   }
 
   &__login {
@@ -28,7 +29,7 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
-    color: #C0B6E5;
+    color: #c0b6e5;
   }
 
   &__row {
@@ -36,14 +37,103 @@
     flex-direction: row;
     justify-content: flex-start;
     width: rem(391px);
-    margin-bottom: 16px;
+    margin-bottom: rem(38px);
+
     &_sub {
       justify-content: space-between;
-      width: 260px;
+      width: rem(260px);
+    }
+
+    &_center {
+      justify-content: center;
+    }
+
+    &_line {
+      padding-top: 60px;
+      padding-bottom: 20px;
     }
   }
 
-  &__input {
+  &__line {
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: normal;
+    color: #FFF;
+    text-align: center;
 
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      background: #FFFFFF;
+    }
+
+    &:before {
+      right: 120%;
+      left: -200%;
+    }
+
+    &:after {
+      left: 120%;
+      right: -200%;
+    }
+  }
+}
+
+.CreateBtn {
+  min-width: rem(310px);
+}
+
+.FacebookBtn {
+  position: relative;
+  background: #1877F2CC;
+  font-size: rem(16px);
+  font-weight: 600;
+  line-height: rem(24px);
+  color: #FFFFFFE6;
+  text-align: left;
+  min-width: rem(310px);
+
+  &:hover {
+    background: #1877F2;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: rem(10px);
+    transform: translateY(-50%);
+    width: rem(26px);
+    height: rem(26px);
+  }
+}
+
+.GoogleBtn {
+  position: relative;
+  background: #FFFFFFCC;
+  font-size: rem(16px);
+  font-weight: 600;
+  line-height: rem(24px);
+  color: #00000099;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  min-width: rem(310px);
+
+  &:hover {
+    background: #FFFFFF;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: rem(10px);
+    transform: translateY(-50%);
+    width: rem(26px);
+    height: rem(26px);
   }
 }

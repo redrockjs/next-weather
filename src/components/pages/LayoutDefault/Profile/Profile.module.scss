@@ -31,23 +31,23 @@
       padding: rem(4px);
       margin: rem(4px);
       font-size: rem(16px);
-      color: #FFFFFF;
-      &:hover{
-        color: #DDDDDD;
+      color: #ffffff;
+      &:hover {
+        color: #dddddd;
       }
     }
-    & span{
+    & span {
       padding: rem(4px);
       margin: rem(4px);
       font-size: rem(16px);
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     &__btn {
-      border: 2px solid #FFFFFF;
+      border: 2px solid #ffffff;
       border-radius: 8px;
-      &:hover{
-        border: 2px solid #DDDDDD;
+      &:hover {
+        border: 2px solid #dddddd;
       }
     }
   }

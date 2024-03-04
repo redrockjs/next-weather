@@ -28,12 +28,12 @@
     composes: Paragraph;
     margin-bottom: rem(30px);
   }
-  &__link{
+  &__link {
     cursor: pointer;
   }
 }
 
-.Switch{
+.Switch {
   min-width: rem(160px);
 }
 

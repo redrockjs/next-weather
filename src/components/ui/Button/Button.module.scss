@@ -1,3 +1,14 @@
 .Button {
+  padding: rem(10px) rem(70px);
+  background: rgba(0, 0, 0, 0.50);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
 
+  font-size: rem(20px);
+  font-weight: 400;
+  line-height: normal;
+  color: #FFF;
+  &:hover {
+    background: rgba(0, 0, 0, 0.70);
+  }
 }

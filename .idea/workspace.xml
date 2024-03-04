@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/svg/checked.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/svg/chevron.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Input/Input.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Select/Select.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Select/Select.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Select/Select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Switch/Switch.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Switch/Switch.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Switch/Switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Switch/Switch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Settings/Settings.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Settings/Settings.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Settings/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Settings/Settings.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SignUp/SignUp.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SignUp/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignUp/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="50606" />
+    <option name="totalTimeSeconds" value="53188" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -137,7 +128,11 @@
       <workItem from="1703052887056" duration="3129000" />
       <workItem from="1703056624858" duration="5816000" />
       <workItem from="1705302138894" duration="2830000" />
-      <workItem from="1705554810450" duration="12393000" />
+      <workItem from="1705554810450" duration="12439000" />
+      <workItem from="1705580777938" duration="111000" />
+      <workItem from="1705650822808" duration="1181000" />
+      <workItem from="1706594728837" duration="16000" />
+      <workItem from="1709536448545" duration="2528000" />
     </task>
     <servers />
   </component>

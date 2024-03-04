@@ -4,7 +4,7 @@
 }
 
 .Placeholder {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .Select {
@@ -12,8 +12,8 @@
   box-sizing: border-box;
   height: rem(40px);
   padding: rem(7px) rem(16px);
-  color: #FFFFFF;
-  background: rgba(0, 0, 0, 0.50);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
 
   //font-family: Arial;
   font-size: rem(20px);
@@ -153,8 +153,9 @@
   color: rgba(26, 26, 26, 0.9);
 
   &:hover {
-    background: url('/images/svg/checked.svg') no-repeat 95% 40%,
-    #ffffff;
+    background:
+      url('/images/svg/checked.svg') no-repeat 95% 40%,
+      #ffffff;
     background-size: rem(24px);
     color: rgba(26, 26, 26, 0.9);
   }
