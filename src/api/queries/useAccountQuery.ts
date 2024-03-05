@@ -7,6 +7,7 @@ const fetchAccount = async () => {
     method: 'GET',
     headers: {
       'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
+      'Content-Type': 'application/json',
     },
   });
   return await res.json();

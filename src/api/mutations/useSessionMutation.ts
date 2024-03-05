@@ -14,10 +14,11 @@ const fetchSession = async ({ email, password }: TRequest) => {
     method: 'POST',
     headers: {
       'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      '"email"': email,
-      '"password"': password,
+      email: email,
+      password: password,
     }),
   });
   return await res.json();
