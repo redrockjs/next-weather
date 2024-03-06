@@ -1,19 +1,50 @@
 import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
 type TSession = {
+  $createdAt: Date;
+  $id: string;
   sessionId: string;
-  userId: string;
-  expire: string;
-  provider: string;
-  ip: string;
+  clientCode: string;
+  clientEngine: string;
+  clientEngineVersion: string;
+  clientName: string;
+  clientType: string;
+  clientVersion: string;
   countryCode: string;
   countryName: string;
+  current: boolean;
+  deviceBrand: string;
+  deviceModel: string;
+  deviceName: string;
+  expire: Date;
+  ip: string;
+  osCode: string;
+  osName: string;
+  osVersion: string;
+  provider: string;
+  providerAccessToken: string;
+  providerAccessTokenExpiry: string;
+  providerRefreshToken: string;
+  providerUid: string;
+  userId: string;
 };
 
 type TAccount = {
-  accountId: string;
-  name: string;
+  $createdAt: Date;
+  $id: string;
+  $updatedAt: Date;
+  accessedAt: Date;
   email: string;
+  emailVerification: boolean;
+  labels: [];
+  name: string;
+  passwordUpdate: Date;
+  phone: string;
+  phoneVerification: boolean;
+  prefs: {};
+  registration: Date;
+  status: boolean;
 };
 
 type TUserStore = {
@@ -26,33 +57,38 @@ type TUserStore = {
   clearAll: () => void;
 };
 
-const useUserStore = create<TUserStore>((set) => ({
-  session: null,
-  setSession: (data) =>
-    set((state) => ({
-      ...state,
-      session: data,
-    })),
-  clearSession: () =>
-    set((state) => ({
-      ...state,
+export const useUserStore = create(
+  devtools<TUserStore>(
+    (set) => ({
       session: null,
-    })),
-  account: null,
-  setAccount: (data) =>
-    set((state) => ({
-      ...state,
-      account: data,
-    })),
-  clearAccount: () =>
-    set((state) => ({
-      ...state,
+      setSession: (data) =>
+        set((state) => ({
+          ...state,
+          session: data,
+        })),
+      clearSession: () =>
+        set((state) => ({
+          ...state,
+          session: null,
+        })),
       account: null,
-    })),
-  clearAll: () =>
-    set((state) => ({
-      ...state,
-      session: null,
-      account: null,
-    })),
-}));
+      setAccount: (data) =>
+        set((state) => ({
+          ...state,
+          account: data,
+        })),
+      clearAccount: () =>
+        set((state) => ({
+          ...state,
+          account: null,
+        })),
+      clearAll: () =>
+        set((state) => ({
+          ...state,
+          session: null,
+          account: null,
+        })),
+    }),
+    { name: 'UserStore' },
+  ),
+);

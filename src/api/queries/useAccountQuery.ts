@@ -5,6 +5,7 @@ import { BackendRoutesEnum } from '@constants/routes';
 const fetchAccount = async () => {
   const res = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.GET_ACCOUNT, {
     method: 'GET',
+    credentials: 'include',
     headers: {
       'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
       'Content-Type': 'application/json',

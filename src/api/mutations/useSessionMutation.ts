@@ -12,6 +12,7 @@ type TResponse = {};
 const fetchSession = async ({ email, password }: TRequest) => {
   const res = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SIGNIN, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
       'Content-Type': 'application/json',

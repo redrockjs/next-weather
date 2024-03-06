@@ -4,8 +4,30 @@ import clsx from 'clsx';
 import { RoutesEnum } from '@constants/routes';
 import { Button, Input } from '@ui/index';
 import { FaceBookIcon, GoogleIcon, LockIcon, MailIcon } from '@constants/icons';
+import { useEffect, useState } from 'react';
+import { fetchAccount, fetchSession } from '@api/index';
+import { useUserStore } from '@store/useUserStore';
 
 function SignIn() {
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
+  const { setSession, setAccount } = useUserStore();
+
+  const session = useUserStore((state) => state.session);
+  const account = useUserStore((state) => state.account);
+
+  const onSignIn = async () => {
+    try {
+      const session = await fetchSession({ email: email ?? '', password: password ?? '' });
+      setSession(session);
+      const account = await fetchAccount();
+      setAccount(account);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <div className={s.SignIn}>
@@ -19,15 +41,30 @@ function SignIn() {
 
         <div className={clsx(s.SignIn__row, s.SignIn__row_center)}>
           <MailIcon />
-          <Input className={s.SignIn__input} placeholder={'alex@smith.com'} />
+          <Input
+            className={s.SignIn__input}
+            placeholder={'name@email.com'}
+            value={email}
+            onChange={setEmail}
+            autoComplete="off"
+          />
         </div>
         <div className={clsx(s.SignIn__row, s.SignIn__row_center)}>
           <LockIcon />
-          <Input className={s.SignIn__input} placeholder={'******'} />
+          <Input
+            className={s.SignIn__input}
+            placeholder={'******'}
+            value={password}
+            onChange={setPassword}
+            autoComplete="off"
+            type="password"
+          />
         </div>
 
         <div className={s.SignIn__row_center}>
-          <Button classname={s.SignInBtn}>Sign In</Button>
+          <Button classname={s.SignInBtn} onClick={onSignIn}>
+            Sign In
+          </Button>
         </div>
 
         <div className={clsx(s.SignIn__row, s.SignIn__row_center, s.SignIn__row_line)}>
