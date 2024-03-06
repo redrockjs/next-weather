@@ -1,12 +1,14 @@
 import s from './SignIn.module.scss';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useState } from 'react';
+import { fetchAccount, fetchSession } from '@api/index';
+import { useUserStore } from '@store/useUserStore';
+
 import { RoutesEnum } from '@constants/routes';
 import { Button, Input } from '@ui/index';
 import { FaceBookIcon, GoogleIcon, LockIcon, MailIcon } from '@constants/icons';
-import { useEffect, useState } from 'react';
-import { fetchAccount, fetchSession } from '@api/index';
-import { useUserStore } from '@store/useUserStore';
+import { Toast } from '@ui/Toast/Toast';
 
 function SignIn() {
   const [email, setEmail] = useState<string>();
@@ -14,8 +16,7 @@ function SignIn() {
 
   const { setSession, setAccount } = useUserStore();
 
-  const session = useUserStore((state) => state.session);
-  const account = useUserStore((state) => state.account);
+  const [openToast, setOpenToast] = useState(false);
 
   const onSignIn = async () => {
     try {
@@ -23,6 +24,7 @@ function SignIn() {
       setSession(session);
       const account = await fetchAccount();
       setAccount(account);
+      setOpenToast(true);
     } catch (e) {
       console.log(e);
     }
@@ -85,6 +87,12 @@ function SignIn() {
           </Button>
         </div>
       </div>
+      <Toast
+        open={openToast}
+        onOpenChange={setOpenToast}
+        title="Message"
+        description="Sign in successfull"
+      />
     </>
   );
 }

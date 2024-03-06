@@ -4,6 +4,7 @@ import { Open_Sans } from 'next/font/google';
 import React from 'react';
 import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import * as RadixToast from '@radix-ui/react-toast';
 
 const openSans = Open_Sans({
   weight: ['400', '500', '700'],
@@ -18,9 +19,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <HydrationBoundary state={pageProps.dehydratedState}>
-        <main className={openSans.className}>
-          <Component {...pageProps} />
-        </main>
+        <RadixToast.Provider>
+          <main className={openSans.className}>
+            <Component {...pageProps} />
+          </main>
+          <RadixToast.Viewport className="ToastViewport" />
+        </RadixToast.Provider>
       </HydrationBoundary>
       <ReactQueryDevtools />
     </QueryClientProvider>
