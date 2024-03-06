@@ -1,1 +1,1 @@
-export * from './useSessionMutation';
+export * from './useCreateEmailSession';

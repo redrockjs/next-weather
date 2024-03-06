@@ -1,1 +1,1 @@
-export * from './useAccountQuery';
+export * from './useGetAccount';

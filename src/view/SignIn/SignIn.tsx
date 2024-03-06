@@ -2,13 +2,14 @@ import s from './SignIn.module.scss';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { fetchAccount, fetchSession } from '@api/index';
+import { CreateEmailSessionFn, GetAccountFn } from '@api/index';
 import { useUserStore } from '@store/useUserStore';
 
 import { RoutesEnum } from '@constants/routes';
 import { Button, Input } from '@ui/index';
 import { FaceBookIcon, GoogleIcon, LockIcon, MailIcon } from '@constants/icons';
 import { Toast } from '@ui/Toast/Toast';
+import { GetSessionFn } from '@api/queries/useGetSession';
 
 function SignIn() {
   const [email, setEmail] = useState<string>();
@@ -20,10 +21,30 @@ function SignIn() {
 
   const onSignIn = async () => {
     try {
-      const session = await fetchSession({ email: email ?? '', password: password ?? '' });
+      const session = await CreateEmailSessionFn({ email: email ?? '', password: password ?? '' });
       setSession(session);
-      const account = await fetchAccount();
+
+      localStorage.setItem('sessionId', session.$id);
+
+      if (session !== null) {
+        const account = await GetAccountFn();
+        setAccount(account);
+      }
+
+      setOpenToast(true);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const onCheck = async () => {
+    try {
+      const account = await GetAccountFn();
       setAccount(account);
+
+      const session = await GetSessionFn({ sessionId: localStorage.getItem('sessionId') ?? '' });
+      setSession(session);
+
       setOpenToast(true);
     } catch (e) {
       console.log(e);
@@ -74,7 +95,7 @@ function SignIn() {
         </div>
 
         <div className={clsx(s.SignIn__row, s.SignIn__row_center)}>
-          <Button classname={s.FacebookBtn}>
+          <Button classname={s.FacebookBtn} onClick={onCheck}>
             <FaceBookIcon />
             Login with Facebook
           </Button>

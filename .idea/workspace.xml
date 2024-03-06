@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Toast/Toast.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Toast/Toast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/queries/useGetSession.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/types/api.const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/mutations/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/mutations/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/mutations/useSessionMutation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/mutations/useCreateEmailSession.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/queries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/queries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/queries/useAccountQuery.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/queries/useGetAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/useUserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/useUserStore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main/Main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SignIn/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignIn/SignIn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,16 +24,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="68618" />
+    <option name="totalTimeSeconds" value="72151" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -136,6 +140,7 @@
       <workItem from="1709568756335" duration="9613000" />
       <workItem from="1709618555521" duration="942000" />
       <workItem from="1709706696596" duration="6199000" />
+      <workItem from="1709745716699" duration="6276000" />
     </task>
     <servers />
   </component>

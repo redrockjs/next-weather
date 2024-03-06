@@ -1,15 +1,14 @@
-import { useMutation } from '@tanstack/react-query';
 import * as process from 'process';
+import { useMutation } from '@tanstack/react-query';
 import { BackendRoutesEnum } from '@constants/routes';
+import { TSession } from '@constants/types/api.const';
 
 type TRequest = {
   email: string;
   password: string;
 };
 
-type TResponse = {};
-
-const fetchSession = async ({ email, password }: TRequest) => {
+const CreateEmailSessionFn = async ({ email, password }: TRequest): Promise<TSession> => {
   const res = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SIGNIN, {
     method: 'POST',
     credentials: 'include',
@@ -25,11 +24,11 @@ const fetchSession = async ({ email, password }: TRequest) => {
   return await res.json();
 };
 
-const useSessionMutation = () => {
+const useCreateEmailSession = () => {
   return useMutation({
     mutationKey: ['session'],
-    mutationFn: fetchSession,
+    mutationFn: CreateEmailSessionFn,
   });
 };
 
-export { useSessionMutation, fetchSession };
+export { useCreateEmailSession, CreateEmailSessionFn };

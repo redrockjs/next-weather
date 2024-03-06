@@ -1,8 +1,9 @@
 import * as process from 'process';
 import { useQuery } from '@tanstack/react-query';
 import { BackendRoutesEnum } from '@constants/routes';
+import { TAccount } from '@constants/types/api.const';
 
-const fetchAccount = async () => {
+const GetAccountFn = async (): Promise<TAccount> => {
   const res = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.GET_ACCOUNT, {
     method: 'GET',
     credentials: 'include',
@@ -14,11 +15,11 @@ const fetchAccount = async () => {
   return await res.json();
 };
 
-const useAccountQuery = () => {
+const useGetAccount = () => {
   return useQuery({
     queryKey: ['account'],
-    queryFn: fetchAccount,
+    queryFn: GetAccountFn,
   });
 };
 
-export { useAccountQuery, fetchAccount };
+export { useGetAccount, GetAccountFn };
