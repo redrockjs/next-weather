@@ -4,6 +4,7 @@ import { Location, Profile, Search } from '@pages/index';
 import { DashIcon, FavoritesIcon, Logo, LogoutIcon, MenuIcon, SettingsIcon } from './Default.svg';
 import Link from 'next/link';
 import { RoutesEnum } from '@constants/routes';
+import { useRemoveEmailSession } from '@api/mutations/useRemoveEmailSession';
 
 type Props = {
   children: ReactNode;

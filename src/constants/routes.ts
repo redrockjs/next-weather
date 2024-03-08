@@ -11,5 +11,5 @@ export enum RoutesEnum {
 export enum BackendRoutesEnum {
   SIGNIN = '/account/sessions/email',
   GET_ACCOUNT = '/account',
-  GET_SESSIONS = '/account/sessions',
+  SESSIONS = '/account/sessions',
 }

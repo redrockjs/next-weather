@@ -2,11 +2,16 @@ import clsx from 'clsx';
 import s from './Profile.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useUserStore } from '@store/useUserStore';
+import Link from 'next/link';
+import { RoutesEnum } from '@constants/routes';
 
 function Profile() {
   const router = useRouter();
 
-  const isLogged = false;
+  const { account } = useUserStore();
+
+  const isLogged = account;
 
   const handleSignIn = () => {
     router.push('/signin');
@@ -15,18 +20,29 @@ function Profile() {
     router.push('/signup');
   };
 
+  const Avatar = () => {
+    return (
+      <div className={s.Profile__circle}>{account?.name[0]}</div>
+      // <Image src="/images/avatar/avatar.png" width={60} height={60} alt="Alex Smith" />
+    );
+  };
+
   return (
     <div className={s.Profile}>
       {isLogged ? (
         <>
           <div className={s.Profile__user}>
-            <p>
-              Hello, <br />
-              <span>Alex Smith</span>
-            </p>
+            <Link href={RoutesEnum.SETTINGS}>
+              <p>
+                Hello, <br />
+                <span>{account.name}</span>
+              </p>
+            </Link>
           </div>
           <div className={s.Profile__photo}>
-            <Image src="/images/avatar/avatar.png" width={60} height={60} alt="Alex Smith" />
+            <Link href={RoutesEnum.SETTINGS}>
+              <Avatar />
+            </Link>
           </div>
         </>
       ) : (

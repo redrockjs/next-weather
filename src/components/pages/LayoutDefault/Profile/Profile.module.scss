@@ -26,6 +26,18 @@
     }
   }
 
+  &__circle {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    border-radius: 50%;
+    font-weight: 600;
+    color: #666666;
+  }
+
   &__menu {
     & button {
       padding: rem(4px);
