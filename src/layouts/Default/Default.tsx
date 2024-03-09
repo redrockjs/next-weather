@@ -5,12 +5,32 @@ import { DashIcon, FavoritesIcon, Logo, LogoutIcon, MenuIcon, SettingsIcon } fro
 import Link from 'next/link';
 import { RoutesEnum } from '@constants/routes';
 import { useRemoveEmailSession } from '@api/mutations/useRemoveEmailSession';
+import { useUserStore } from '@store/useUserStore';
+import toast from 'react-hot-toast';
 
 type Props = {
   children: ReactNode;
 };
 
 const Default = ({ children }: Props) => {
+  const { session } = useUserStore();
+
+  const signOut = useRemoveEmailSession();
+
+  const onLogout = () => {
+    signOut.mutate(
+      { sessionId: session?.sessionId ?? '' },
+      {
+        onSuccess: () => {
+          toast.success('Logout success');
+        },
+        onError: () => {
+          toast.error('Error');
+        },
+      },
+    );
+  };
+
   return (
     <div className={s.Container}>
       <div className={s.Sidebar}>
@@ -30,7 +50,7 @@ const Default = ({ children }: Props) => {
             <SettingsIcon className={s.SettingsIcon} />
           </Link>
         </div>
-        <div className={s.Sidebar__logout}>
+        <div className={s.Sidebar__logout} onClick={onLogout}>
           <LogoutIcon className={s.LogoutIcon} />
         </div>
       </div>
