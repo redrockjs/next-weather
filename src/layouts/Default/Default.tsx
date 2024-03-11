@@ -18,17 +18,22 @@ const Default = ({ children }: Props) => {
   const signOut = useRemoveEmailSession();
 
   const onLogout = async () => {
-    signOut.mutate(
-      { sessionId: session?.sessionId ?? '' },
-      {
-        onSuccess: () => {
-          toast.success('Successfully');
+    try {
+      const res = await signOut.mutateAsync(
+        { sessionId: session?.sessionId ?? '' },
+        {
+          onSuccess: () => {
+            toast.success('Successfully');
+          },
+          onError: (error) => {
+            toast.error(`${error}`);
+          },
         },
-        onError: () => {
-          toast.error('Something was wrong');
-        },
-      },
-    );
+      );
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

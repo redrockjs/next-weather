@@ -9,7 +9,7 @@ type TRequest = {
 };
 
 const CreateEmailSessionFn = async ({ email, password }: TRequest): Promise<TSession> => {
-  const res = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SIGNIN, {
+  const response = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SIGNIN, {
     method: 'POST',
     credentials: 'include',
     headers: {
@@ -21,7 +21,16 @@ const CreateEmailSessionFn = async ({ email, password }: TRequest): Promise<TSes
       password: password,
     }),
   });
-  return await res.json();
+
+  if (!response.ok) {
+    if (response.status === 401) {
+      throw new Error(`401 Unauthorized`);
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  }
+
+  return await response.json();
 };
 
 const useCreateEmailSession = () => {

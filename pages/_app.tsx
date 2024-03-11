@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <HydrationBoundary state={pageProps.dehydratedState}>
         <main className={openSans.className}>
           <Component {...pageProps} />
-          <Toaster position="top-center" reverseOrder={false} gutter={8} containerClassName="" />
+          <Toaster position="top-center" reverseOrder={false} gutter={8} />
         </main>
       </HydrationBoundary>
       <ReactQueryDevtools />

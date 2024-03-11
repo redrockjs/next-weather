@@ -7,7 +7,7 @@ type TRequest = {
 };
 
 const RemoveEmailSessionFn = async ({ sessionId }: TRequest) => {
-  const res = await fetch(
+  const response = await fetch(
     process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS + `/${sessionId}`,
     {
       method: 'DELETE',
@@ -18,7 +18,14 @@ const RemoveEmailSessionFn = async ({ sessionId }: TRequest) => {
       },
     },
   );
-  return await res.json();
+
+  if (!response.ok) {
+    if (response.status === 401) {
+      throw new Error(`401 Unauthorized`);
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  }
 };
 
 const useRemoveEmailSession = () => {
