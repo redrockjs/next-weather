@@ -17,15 +17,15 @@ const Default = ({ children }: Props) => {
 
   const signOut = useRemoveEmailSession();
 
-  const onLogout = () => {
+  const onLogout = async () => {
     signOut.mutate(
       { sessionId: session?.sessionId ?? '' },
       {
         onSuccess: () => {
-          toast.success('Logout success');
+          toast.success('Successfully');
         },
         onError: () => {
-          toast.error('Error');
+          toast.error('Something was wrong');
         },
       },
     );

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0f5e973-45ce-4b2a-b21c-a14665bbc258" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/LayoutDefault/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default/Default.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="74507" />
+    <option name="totalTimeSeconds" value="76088" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -133,6 +134,7 @@
       <workItem from="1709745716699" duration="6316000" />
       <workItem from="1709917915283" duration="2301000" />
       <workItem from="1709971989878" duration="922000" />
+      <workItem from="1710146034261" duration="3422000" />
     </task>
     <servers />
   </component>

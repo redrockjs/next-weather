@@ -9,7 +9,7 @@ import { RoutesEnum } from '@constants/routes';
 function Profile() {
   const router = useRouter();
 
-  const { account } = useUserStore();
+  const account = useUserStore((state) => state.account);
 
   const isLogged = account;
 
@@ -22,7 +22,7 @@ function Profile() {
 
   const Avatar = () => {
     return (
-      <div className={s.Profile__circle}>{account?.name[0]}</div>
+      <div className={s.Profile__circle}>{account?.name?.at(0) ?? ''}</div>
       // <Image src="/images/avatar/avatar.png" width={60} height={60} alt="Alex Smith" />
     );
   };
