@@ -6,7 +6,7 @@ type TRequest = {
   sessionId: string;
 };
 
-const RemoveEmailSessionFn = async ({ sessionId }: TRequest) => {
+const removeEmailSessionFn = async ({ sessionId }: TRequest) => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS + `/${sessionId}`,
     {
@@ -19,20 +19,22 @@ const RemoveEmailSessionFn = async ({ sessionId }: TRequest) => {
     },
   );
 
-  if (!response.ok) {
-    if (response.status === 401) {
-      throw new Error(`401 Unauthorized`);
-    } else {
-      throw new Error('Network response was not ok');
-    }
+  if (response.ok) {
+    return await response.json();
+  } else {
+    if (response.status === 400) throw new Error(`400 Bad request`);
+    if (response.status === 401) throw new Error(`401 Unauthorized`);
+    if (response.status === 500) throw new Error('500 Internal server error');
+
+    throw new Error(`${response.status} Network response was not ok`);
   }
 };
 
 const useRemoveEmailSession = () => {
   return useMutation({
     mutationKey: ['session'],
-    mutationFn: RemoveEmailSessionFn,
+    mutationFn: removeEmailSessionFn,
   });
 };
 
-export { useRemoveEmailSession, RemoveEmailSessionFn };
+export { useRemoveEmailSession, removeEmailSessionFn };

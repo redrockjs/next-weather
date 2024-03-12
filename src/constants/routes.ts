@@ -9,7 +9,10 @@ export enum RoutesEnum {
 }
 
 export enum BackendRoutesEnum {
-  SIGNIN = '/account/sessions/email',
-  GET_ACCOUNT = '/account',
+  SESSIONS_EMAIL = '/account/sessions/email',
+  ACCOUNT = '/account',
+  PASSWORD = '/account/password',
   SESSIONS = '/account/sessions',
+  SETTINGS = '/settings/documents',
+  CURRENT_SETTINGS = '/settings/documents/base',
 }

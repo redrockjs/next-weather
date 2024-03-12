@@ -1,4 +1,6 @@
-export const SearchIcon = ({ className }: { className?: string }) => (
+import { SVGIconProps } from '@constants/types/types';
+
+export const SearchIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="43"

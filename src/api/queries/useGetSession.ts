@@ -9,9 +9,9 @@ type TRequest = {
 
 type TResponse = TSession;
 
-const GetSessionFn = async ({ sessionId }: TRequest): Promise<TResponse> => {
+const getSessionFn = async ({ sessionId }: TRequest): Promise<TResponse> => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS + '/' + sessionId,
+    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS + `/${sessionId}`,
     {
       method: 'GET',
       credentials: 'include',
@@ -22,22 +22,22 @@ const GetSessionFn = async ({ sessionId }: TRequest): Promise<TResponse> => {
     },
   );
 
-  if (!response.ok) {
-    if (response.status === 401) {
-      throw new Error(`401 Unauthorized`);
-    } else {
-      throw new Error('Network response was not ok');
-    }
-  }
+  if (response.ok) {
+    return await response.json();
+  } else {
+    if (response.status === 400) throw new Error(`400 Bad request`);
+    if (response.status === 401) throw new Error(`401 Unauthorized`);
+    if (response.status === 500) throw new Error('500 Internal server error');
 
-  return await response.json();
+    throw new Error(`${response.status} Network response was not ok`);
+  }
 };
 
 const useGetSession = ({ sessionId }: TRequest) => {
   return useQuery({
     queryKey: ['session'],
-    queryFn: () => GetSessionFn({ sessionId }),
+    queryFn: () => getSessionFn({ sessionId }),
   });
 };
 
-export { useGetSession, GetSessionFn };
+export { useGetSession, getSessionFn };

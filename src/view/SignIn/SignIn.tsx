@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { CreateEmailSessionFn, GetAccountFn } from '@api/index';
-import { useUserStore } from '@store/useUserStore';
+import { createEmailSessionFn, getAccountFn } from '@api/index';
+import { useUserStore } from '@store/index';
 import { RoutesEnum } from '@constants/routes';
 
 import toast from 'react-hot-toast';
@@ -20,19 +20,20 @@ function SignIn() {
 
   const onSignIn = async () => {
     try {
-      const session = await CreateEmailSessionFn({ email: email ?? '', password: password ?? '' });
+      const session = await createEmailSessionFn({ email: email ?? '', password: password ?? '' });
 
       if (session !== null) {
-        const account = await GetAccountFn();
+        const account = await getAccountFn();
         setAccount(account);
         localStorage.setItem('sessionId', session.$id);
       }
 
       router.push(RoutesEnum.HOME).then(() => {
-        toast.success('Successfully sing in!');
+        toast.success('Successfully logged in!');
       });
     } catch (e) {
       console.log(e);
+      toast.error('Incorrect email or password');
     }
   };
 

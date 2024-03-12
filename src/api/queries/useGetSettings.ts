@@ -1,30 +1,27 @@
-import * as process from 'process';
-import { useMutation } from '@tanstack/react-query';
+import process from 'process';
 import { BackendRoutesEnum } from '@constants/routes';
-import { TSession } from '@constants/types/api.const';
+import { useQuery } from '@tanstack/react-query';
 
-type TRequest = {
-  email: string;
-  password: string;
+type TResponse = {
+  temperature: 'celsius';
+  pressure: 'mmhg';
+  geolocation: true;
+  local: 'en';
+  windforce: 'kmh';
 };
 
-const createEmailSessionFn = async ({ email, password }: TRequest): Promise<TSession> => {
+const getSettingsFn = async (): Promise<TResponse> => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS_EMAIL,
+    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.CURRENT_SETTINGS,
     {
-      method: 'POST',
+      method: 'GET',
       credentials: 'include',
       headers: {
         'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
     },
   );
-
   if (response.ok) {
     return await response.json();
   } else {
@@ -36,11 +33,11 @@ const createEmailSessionFn = async ({ email, password }: TRequest): Promise<TSes
   }
 };
 
-const useCreateEmailSession = () => {
-  return useMutation({
-    mutationKey: ['session'],
-    mutationFn: createEmailSessionFn,
+const useGetSettings = () => {
+  return useQuery({
+    queryKey: ['settings'],
+    queryFn: getSettingsFn,
   });
 };
 
-export { useCreateEmailSession, createEmailSessionFn };
+export { useGetSettings, getSettingsFn };

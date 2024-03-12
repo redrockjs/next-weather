@@ -1,16 +1,47 @@
 import s from './Settings.module.scss';
 import { useState } from 'react';
 import { Select, Switch } from '@ui/index';
+import { useRouter } from 'next/router';
+import { RoutesEnum } from '@constants/routes';
+import toast from 'react-hot-toast';
+import { useRemoveEmailSession } from '@api/mutations/useRemoveEmailSession';
+import { useUserStore } from '@store/useUserStore';
 
 function Settings() {
+  const router = useRouter();
+
+  const signOut = useRemoveEmailSession();
+  const { clearAccount } = useUserStore();
+
   const [temperature, setTemperature] = useState('°C');
   const [windForce, setWindForce] = useState('m/s');
   const [pressure, setPressure] = useState('mmHg');
   const [geolocation, setGeolocation] = useState('On');
   const [country, setCountry] = useState('English');
 
-  const handleChangePassword = () => {};
-  const handleLogout = () => {};
+  const handleChangePassword = () => {
+    router.push(RoutesEnum.RESTORE);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut.mutateAsync(
+        { sessionId: localStorage.getItem('sessionId') ?? '' },
+        {
+          onSuccess: () => {
+            clearAccount();
+            localStorage.removeItem('sessionId');
+            toast.success('Successfully');
+          },
+          onError: (error) => {
+            toast.error(`${error}`);
+          },
+        },
+      );
+    } catch (e) {
+      console.log('Request error', e);
+    }
+  };
 
   return (
     <div className={s.Settings}>

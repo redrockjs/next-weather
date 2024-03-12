@@ -1,4 +1,6 @@
-export const MapIcon = ({ className }: { className?: string }) => (
+import { SVGIconProps } from '@constants/types/types';
+
+export const MapIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="42"

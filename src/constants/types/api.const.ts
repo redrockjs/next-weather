@@ -43,3 +43,11 @@ export type TAccount = {
   registration: Date;
   status: boolean;
 };
+
+export type TSettings = {
+  temperature: string;
+  windforce: string;
+  pressure: string;
+  local: string;
+  geolocation: true;
+};

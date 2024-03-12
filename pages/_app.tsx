@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
-import { useUserStore } from '@store/useUserStore';
-import { GetAccountFn } from '@api/queries';
+import { useUserStore } from '@store/index';
+import { getAccountFn } from '@api/index';
 
 const openSans = Open_Sans({
   weight: ['400', '500', '700'],
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     async function getAccount() {
-      return await GetAccountFn();
+      return await getAccountFn();
     }
 
     if (account === null) {

@@ -1,6 +1,6 @@
-import { SVGProps } from '@constants/types/types';
+import { SVGIconProps } from '@constants/types/types';
 
-export const WindIcon = ({ className }: SVGProps) => (
+export const WindIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -18,7 +18,7 @@ export const WindIcon = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const PressureIcon = ({ className }: SVGProps) => (
+export const PressureIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -66,7 +66,7 @@ export const PressureIcon = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const WindArrow = ({ className }: SVGProps) => (
+export const WindArrow = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="72"
@@ -85,7 +85,7 @@ export const WindArrow = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const HumidityIcon = ({ className }: SVGProps) => (
+export const HumidityIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -101,7 +101,7 @@ export const HumidityIcon = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const VisibilityIcon = ({ className }: SVGProps) => (
+export const VisibilityIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="50"
@@ -118,7 +118,7 @@ export const VisibilityIcon = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const UVIcon = ({ className }: SVGProps) => (
+export const UVIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="45"
@@ -142,7 +142,7 @@ export const UVIcon = ({ className }: SVGProps) => (
   </svg>
 );
 
-export const FeelsIcon = ({ className }: SVGProps) => (
+export const FeelsIcon = ({ className }: SVGIconProps) => (
   <svg
     className={className}
     width="45"

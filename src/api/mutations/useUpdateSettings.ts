@@ -1,26 +1,24 @@
-import * as process from 'process';
-import { useMutation } from '@tanstack/react-query';
+import { TSettings } from '@constants/types/api.const';
+import process from 'process';
 import { BackendRoutesEnum } from '@constants/routes';
-import { TSession } from '@constants/types/api.const';
+import { useMutation } from '@tanstack/react-query';
 
 type TRequest = {
-  email: string;
-  password: string;
+  data: TSettings;
 };
 
-const createEmailSessionFn = async ({ email, password }: TRequest): Promise<TSession> => {
+const updateSettingsFn = async ({ data }: TRequest) => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.SESSIONS_EMAIL,
+    process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.CURRENT_SETTINGS,
     {
-      method: 'POST',
+      method: 'PATCH',
       credentials: 'include',
       headers: {
         'X-Appwrite-Project': process.env.NEXT_PUBLIC_PROJECT_ID!,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email,
-        password,
+        data,
       }),
     },
   );
@@ -36,11 +34,11 @@ const createEmailSessionFn = async ({ email, password }: TRequest): Promise<TSes
   }
 };
 
-const useCreateEmailSession = () => {
+const useUpdateSettings = () => {
   return useMutation({
-    mutationKey: ['session'],
-    mutationFn: createEmailSessionFn,
+    mutationKey: ['settings'],
+    mutationFn: updateSettingsFn,
   });
 };
 
-export { useCreateEmailSession, createEmailSessionFn };
+export { useUpdateSettings, updateSettingsFn };

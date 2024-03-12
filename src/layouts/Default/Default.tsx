@@ -4,8 +4,8 @@ import { Location, Profile, Search } from '@pages/index';
 import { DashIcon, FavoritesIcon, Logo, LogoutIcon, MenuIcon, SettingsIcon } from './Default.svg';
 import Link from 'next/link';
 import { RoutesEnum } from '@constants/routes';
-import { useRemoveEmailSession } from '@api/mutations/useRemoveEmailSession';
-import { useUserStore } from '@store/useUserStore';
+import { useRemoveEmailSession } from '@api/index';
+import { useUserStore } from '@store/index';
 import toast from 'react-hot-toast';
 
 type Props = {

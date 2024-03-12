@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import { BackendRoutesEnum } from '@constants/routes';
 import { TAccount } from '@constants/types/api.const';
 
-const GetAccountFn = async (): Promise<TAccount> => {
-  const response = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.GET_ACCOUNT, {
+const getAccountFn = async (): Promise<TAccount> => {
+  const response = await fetch(process.env.NEXT_PUBLIC_BACK_URL + BackendRoutesEnum.ACCOUNT, {
     method: 'GET',
     credentials: 'include',
     headers: {
@@ -13,22 +13,22 @@ const GetAccountFn = async (): Promise<TAccount> => {
     },
   });
 
-  if (!response.ok) {
-    if (response.status === 401) {
-      throw new Error(`401 Unauthorized`);
-    } else {
-      throw new Error('Network response was not ok');
-    }
-  }
+  if (response.ok) {
+    return await response.json();
+  } else {
+    if (response.status === 400) throw new Error(`400 Bad request`);
+    if (response.status === 401) throw new Error(`401 Unauthorized`);
+    if (response.status === 500) throw new Error('500 Internal server error');
 
-  return await response.json();
+    throw new Error(`${response.status} Network response was not ok`);
+  }
 };
 
 const useGetAccount = () => {
   return useQuery({
     queryKey: ['account'],
-    queryFn: GetAccountFn,
+    queryFn: getAccountFn,
   });
 };
 
-export { useGetAccount, GetAccountFn };
+export { useGetAccount, getAccountFn };
