@@ -1,10 +1,12 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { Open_Sans } from 'next/font/google';
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
+import { useUserStore } from '@store/useUserStore';
+import { GetAccountFn } from '@api/queries';
 
 const openSans = Open_Sans({
   weight: ['400', '500', '700'],
@@ -14,7 +16,26 @@ const openSans = Open_Sans({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [queryClient] = React.useState(() => new QueryClient());
+  const [queryClient] = useState(() => new QueryClient());
+
+  const { setAccount } = useUserStore();
+  const account = useUserStore((state) => state.account);
+
+  useEffect(() => {
+    async function getAccount() {
+      return await GetAccountFn();
+    }
+
+    if (account === null) {
+      getAccount()
+        .then((res) => {
+          setAccount(res);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

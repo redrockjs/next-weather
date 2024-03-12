@@ -13,16 +13,17 @@ type Props = {
 };
 
 const Default = ({ children }: Props) => {
-  const { session } = useUserStore();
-
   const signOut = useRemoveEmailSession();
+  const { clearAccount } = useUserStore();
 
   const onLogout = async () => {
     try {
-      const res = await signOut.mutateAsync(
-        { sessionId: session?.sessionId ?? '' },
+      await signOut.mutateAsync(
+        { sessionId: localStorage.getItem('sessionId') ?? '' },
         {
           onSuccess: () => {
+            clearAccount();
+            localStorage.removeItem('sessionId');
             toast.success('Successfully');
           },
           onError: (error) => {
@@ -30,9 +31,8 @@ const Default = ({ children }: Props) => {
           },
         },
       );
-      console.log(res);
     } catch (e) {
-      console.log(e);
+      console.log('Request error', e);
     }
   };
 

@@ -1,46 +1,36 @@
 import s from './SignIn.module.scss';
-import Link from 'next/link';
 import clsx from 'clsx';
+import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { CreateEmailSessionFn, GetAccountFn } from '@api/index';
 import { useUserStore } from '@store/useUserStore';
-
 import { RoutesEnum } from '@constants/routes';
+
+import toast from 'react-hot-toast';
 import { Button, Input } from '@ui/index';
 import { FaceBookIcon, GoogleIcon, LockIcon, MailIcon } from '@constants/icons';
-import { GetSessionFn } from '@api/queries/useGetSession';
-import toast from 'react-hot-toast';
 
 function SignIn() {
+  const router = useRouter();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
 
-  const { setSession, setAccount } = useUserStore();
+  const { setAccount } = useUserStore();
 
   const onSignIn = async () => {
     try {
       const session = await CreateEmailSessionFn({ email: email ?? '', password: password ?? '' });
-      setSession(session);
-
-      localStorage.setItem('sessionId', session.$id);
 
       if (session !== null) {
         const account = await GetAccountFn();
         setAccount(account);
+        localStorage.setItem('sessionId', session.$id);
       }
-      toast.success('Successfully sing in!');
-    } catch (e) {
-      console.log(e);
-    }
-  };
 
-  const onCheck = async () => {
-    try {
-      const account = await GetAccountFn();
-      setAccount(account);
-
-      const session = await GetSessionFn({ sessionId: localStorage.getItem('sessionId') ?? '' });
-      setSession(session);
+      router.push(RoutesEnum.HOME).then(() => {
+        toast.success('Successfully sing in!');
+      });
     } catch (e) {
       console.log(e);
     }
@@ -89,7 +79,7 @@ function SignIn() {
       </div>
 
       <div className={clsx(s.SignIn__row, s.SignIn__row_center)}>
-        <Button classname={s.FacebookBtn} onClick={onCheck}>
+        <Button classname={s.FacebookBtn}>
           <FaceBookIcon />
           Login with Facebook
         </Button>
